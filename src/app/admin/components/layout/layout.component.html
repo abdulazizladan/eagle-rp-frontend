@@ -1,0 +1,52 @@
+<div fxLayout="column" id="main">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>
+          menu
+        </mat-icon>
+      </button>
+      <h2>Enterprise Resource Planner</h2>
+      <span fxFlex="1 1 auto"></span>
+      <button mat-icon-button>
+        <mat-icon>
+          more_vert
+        </mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container fxFlex="1 1 auto">
+    <mat-sidenav id="sidenav" #sidenav fxLayout="column" mode="push">
+      <div id="user-profile"></div>
+      <mat-divider></mat-divider>
+      <button mat-button routerLink="./">
+        <mat-icon>dashboard</mat-icon>
+        Dashboard
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button routerLink="users">
+        <mat-icon>people</mat-icon>
+        Users
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button routerLink="staff">
+        <mat-icon>group_work</mat-icon>
+        Staff
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button routerLink="assets">
+        <mat-icon>work</mat-icon>
+        Assets
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button routerLink="projects">
+        <mat-icon>track_changes</mat-icon>
+        Projects
+      </button>
+      <mat-divider></mat-divider>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
