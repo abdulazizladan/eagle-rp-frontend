@@ -1,0 +1,37 @@
+<div fxLayout="column" fxLayoutGap="25px">
+
+  <mat-toolbar class="mat-elevation-z4" fxLayout="column" fxLayoutGap="35px">
+    <mat-toolbar-row fxLayout="row" fxLayoutGap="20px">
+      <h2>User details</h2>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div fxLayout.xs="column" fxLayout.gt-xs="row" fxLayoutGap="25px" class="emptySection">
+    <div id="profile_pic" fxFlex.gt-xs="240px"></div>
+    <div fxFlex.gt-xs="1 1 auto" fxLayout="column">
+      <mat-toolbar>
+        <mat-toolbar-row>
+          <h3>Basic info</h3>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <span>First name</span>
+      <span>Middle name</span>
+      <span>Last name</span>
+      <span>Email</span>
+      <span>Gender</span>
+      <section fxLayout="row">
+        <span fxFlex="1 1 auto"></span>
+        <button mat-flat-button color="warn" (click)="openPasswordResetDialog()">Reset password</button>
+      </section>
+    </div>
+  </div>
+
+  <div class="section">
+    <ul>
+      <li>activity log</li>
+      <li>Tickets (if any)</li>
+      <li>Go to employee page (if employee)</li>
+    </ul>
+  </div>
+
+</div>

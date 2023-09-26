@@ -1,0 +1,41 @@
+{
+  "rootPath": "/Users/user/Documents/WIP/Developer/ERP/frontend/",
+  "data": [
+    {
+      "filePath": "/Users/user/Documents/WIP/Developer/ERP/frontend/src/app/features/user-management/store/user-management.reducer.ts",
+      "pos": 421,
+      "end": 671,
+      "kind": 1004,
+      "kindText": "Reducer",
+      "state": {
+        "name": "UserState",
+        "properties": []
+      },
+      "name": "UserReducer"
+    },
+    {
+      "filePath": "/Users/user/Documents/WIP/Developer/ERP/frontend/src/app/admin/store/admin.reducer.ts",
+      "pos": 421,
+      "end": 452,
+      "kind": 1004,
+      "kindText": "Reducer",
+      "state": {
+        "name": "AdminState",
+        "properties": []
+      },
+      "name": "AdminReducer"
+    },
+    {
+      "filePath": "/Users/user/Documents/WIP/Developer/ERP/frontend/src/app/auth/store/auth.reducer.ts",
+      "pos": 348,
+      "end": 587,
+      "kind": 1004,
+      "kindText": "Reducer",
+      "state": {
+        "name": "AuthState",
+        "properties": []
+      },
+      "name": "AuthReducer"
+    }
+  ]
+}

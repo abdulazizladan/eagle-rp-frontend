@@ -1,0 +1,19 @@
+@startuml [Auth] LOGIN FAILURE
+
+set namespaceSeparator ::
+skinparam class {
+    BackgroundColor<<listen>> HoneyDew
+    BackgroundColor<<action>> Wheat
+    BackgroundColor<<dispatch>> Technology
+}
+
+interface "[Auth] LOGIN FAILURE" << (A,#FF7700) action >> {
+            variable: loginFailure
+            src: auth.actions
+            --
+            
+        }
+
+         
+
+@enduml

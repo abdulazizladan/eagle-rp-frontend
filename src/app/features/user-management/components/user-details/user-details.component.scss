@@ -1,0 +1,18 @@
+.section{
+  box-shadow: 1px 1px 5px grey;
+  padding: 25px;
+}
+.emptySection{
+  #profile_pic{
+    aspect-ratio: 1/1;
+    background-image: url("../../../../../assets/img/dummy.svg");
+    background-size: contain;
+    background-color: grey;
+    box-shadow: 1px 1px 5px grey;
+  }
+  div{
+    box-shadow: 1px 1px 5px grey;
+    padding: 25px;
+  }
+}
+

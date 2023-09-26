@@ -1,1 +1,62 @@
-<p>projects-list works!</p>
+<div fxLayout="column" fxLayoutGap="25px">
+<mat-toolbar fxLayout="column" fxLayoutGap="35px" class="mat-elevation-z4">
+    <span></span>
+    <mat-toolbar-row fxLayout="row" fxLayoutGap="20px">
+      <mat-form-field appearance="outline" fxFlex="1 1 auto">
+        <mat-label>Search</mat-label>
+        <input matInput>
+        <mat-icon matPrefix>
+          search
+        </mat-icon>
+      </mat-form-field>
+      <button mat-flat-button color="accent" (click)="openDialog()">
+        <mat-icon>add</mat-icon>
+        Add project
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+    <mat-tab label="Projects">
+      <ng-template mat-tab-label>
+        <mat-icon>group_work</mat-icon>Projects
+      </ng-template>
+      <mat-toolbar color="accent">
+        <h3>Projects</h3>
+      </mat-toolbar>
+      <table>
+
+      </table>
+      Title
+      Description
+      Status
+      Action
+    </mat-tab>
+    <mat-tab label="Group tasks">
+      <ng-template mat-tab-label>
+        <mat-icon>people</mat-icon>Group tasks
+      </ng-template>
+      <mat-toolbar color="accent">
+        <h3>Group tasks</h3>
+      </mat-toolbar>
+      <table>
+
+      </table>
+      Task title
+      Task description
+    </mat-tab>
+    <mat-tab label="Individual tasks">
+      <ng-template mat-tab-label>
+        <mat-icon>person</mat-icon>Individual tasks
+      </ng-template>
+      <mat-toolbar color="accent">
+        <h3>Individual tasks</h3>
+      </mat-toolbar>
+      <table>
+
+      </table>
+      Task title
+      Task description
+    </mat-tab>
+  </mat-tab-group>
+</div>

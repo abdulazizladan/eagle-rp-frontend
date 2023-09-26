@@ -1,0 +1,33 @@
+<h1 matDialogTitle>Title</h1>
+
+<mat-dialog-content fxLayout="column" fxLayoutGap="5px">
+
+  <div></div>
+  <div fxLayout="row">
+
+    <mat-form-field appearance="outline" fxFlex="240px">
+      <mat-label>Document ID</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+  </div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Document title</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Document description</mat-label>
+    <textarea matInput style="resize: none;" rows="4"></textarea>
+  </mat-form-field>
+
+  <input type="file">
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-flat-button matDialogClose color="warn">Close dialog</button>
+    <button mat-flat-button color="primary" (click)="submit()">Action</button>
+
+</mat-dialog-actions>

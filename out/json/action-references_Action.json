@@ -1,0 +1,200 @@
+{
+  "rootPath": "/Users/user/Documents/WIP/Developer/ERP/frontend/",
+  "data": [
+    {
+      "name": "[USER] Load Users",
+      "filePath": "/Users/user/Documents/WIP/Developer/ERP/frontend/src/app/features/user-management/store/user-management.actions.ts",
+      "pos": 122,
+      "end": 155,
+      "kind": 1002,
+      "kindText": "Action",
+      "variable": "loadUsers"
+    },
+    {
+      "name": "[USER] Load Users Success",
+      "filePath": "/Users/user/Documents/WIP/Developer/ERP/frontend/src/app/features/user-management/store/user-management.actions.ts",
+      "pos": 189,
+      "end": 256,
+      "kind": 1002,
+      "kindText": "Action",
+      "createActionArgs": [
+        {
+          "name": "props",
+          "typeArguments": [
+            {
+              "kind": 173,
+              "kindText": "TypeLiteral",
+              "properties": [
+                {
+                  "name": "users",
+                  "type": "User[]"
+                }
+              ]
+            }
+          ],
+          "kind": 196,
+          "kindText": "CallExpression"
+        }
+      ],
+      "variable": "loadUsersSuccess"
+    },
+    {
+      "name": "[USER] Load Users Failure",
+      "filePath": "/Users/user/Documents/WIP/Developer/ERP/frontend/src/app/features/user-management/store/user-management.actions.ts",
+      "pos": 290,
+      "end": 357,
+      "kind": 1002,
+      "kindText": "Action",
+      "createActionArgs": [
+        {
+          "name": "props",
+          "typeArguments": [
+            {
+              "kind": 173,
+              "kindText": "TypeLiteral",
+              "properties": [
+                {
+                  "name": "error",
+                  "type": "string"
+                }
+              ]
+            }
+          ],
+          "kind": 196,
+          "kindText": "CallExpression"
+        }
+      ],
+      "variable": "loadUsersFailure"
+    },
+    {
+      "name": "[USERS] Create User",
+      "filePath": "/Users/user/Documents/WIP/Developer/ERP/frontend/src/app/features/user-management/store/user-management.actions.ts",
+      "pos": 385,
+      "end": 420,
+      "kind": 1002,
+      "kindText": "Action",
+      "variable": "createUser"
+    },
+    {
+      "name": "[USERS] Create User Success",
+      "filePath": "/Users/user/Documents/WIP/Developer/ERP/frontend/src/app/features/user-management/store/user-management.actions.ts",
+      "pos": 455,
+      "end": 521,
+      "kind": 1002,
+      "kindText": "Action",
+      "createActionArgs": [
+        {
+          "name": "props",
+          "typeArguments": [
+            {
+              "kind": 173,
+              "kindText": "TypeLiteral",
+              "properties": [
+                {
+                  "name": "user",
+                  "type": "User"
+                }
+              ]
+            }
+          ],
+          "kind": 196,
+          "kindText": "CallExpression"
+        }
+      ],
+      "variable": "createUserSuccess"
+    },
+    {
+      "name": "[USERS] Create User Failure",
+      "filePath": "/Users/user/Documents/WIP/Developer/ERP/frontend/src/app/features/user-management/store/user-management.actions.ts",
+      "pos": 556,
+      "end": 625,
+      "kind": 1002,
+      "kindText": "Action",
+      "createActionArgs": [
+        {
+          "name": "props",
+          "typeArguments": [
+            {
+              "kind": 173,
+              "kindText": "TypeLiteral",
+              "properties": [
+                {
+                  "name": "error",
+                  "type": "string"
+                }
+              ]
+            }
+          ],
+          "kind": 196,
+          "kindText": "CallExpression"
+        }
+      ],
+      "variable": "createUserFailure"
+    },
+    {
+      "name": "[Auth] LOGIN",
+      "filePath": "/Users/user/Documents/WIP/Developer/ERP/frontend/src/app/auth/store/auth.actions.ts",
+      "pos": 185,
+      "end": 255,
+      "kind": 1002,
+      "kindText": "Action",
+      "createActionArgs": [
+        {
+          "name": "props",
+          "typeArguments": [
+            {
+              "kind": 173,
+              "kindText": "TypeLiteral",
+              "properties": [
+                {
+                  "name": "credentials",
+                  "type": "LoginCredentials"
+                }
+              ]
+            }
+          ],
+          "kind": 196,
+          "kindText": "CallExpression"
+        }
+      ],
+      "variable": "login"
+    },
+    {
+      "name": "[Auth] LOGIN SUCCESS",
+      "filePath": "/Users/user/Documents/WIP/Developer/ERP/frontend/src/app/auth/store/auth.actions.ts",
+      "pos": 285,
+      "end": 349,
+      "kind": 1002,
+      "kindText": "Action",
+      "createActionArgs": [
+        {
+          "name": "props",
+          "typeArguments": [
+            {
+              "kind": 173,
+              "kindText": "TypeLiteral",
+              "properties": [
+                {
+                  "name": "user",
+                  "type": "AuthState"
+                }
+              ]
+            }
+          ],
+          "kind": 196,
+          "kindText": "CallExpression"
+        }
+      ],
+      "variable": "loginSuccess"
+    },
+    {
+      "name": "[Auth] LOGIN FAILURE",
+      "filePath": "/Users/user/Documents/WIP/Developer/ERP/frontend/src/app/auth/store/auth.actions.ts",
+      "pos": 379,
+      "end": 415,
+      "kind": 1002,
+      "kindText": "Action",
+      "variable": "loginFailure"
+    }
+  ]
+}

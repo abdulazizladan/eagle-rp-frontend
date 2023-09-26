@@ -1,0 +1,20 @@
+@startuml [Auth] LOGIN SUCCESS
+
+set namespaceSeparator ::
+skinparam class {
+    BackgroundColor<<listen>> HoneyDew
+    BackgroundColor<<action>> Wheat
+    BackgroundColor<<dispatch>> Technology
+}
+
+interface "[Auth] LOGIN SUCCESS" << (A,#FF7700) action >> {
+            variable: loginSuccess
+            src: auth.actions
+            --
+            props<{user: AuthState}>
+
+        }
+
+         
+
+@enduml

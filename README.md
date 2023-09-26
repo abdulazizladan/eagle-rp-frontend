@@ -1,27 +1,82 @@
-# ERP
+# Eagle Resource Planner
+![Illustration](logo.svg)
+## Frontend stack
+* [Angular]()
+  * [Flex-layout]()
+  * [Material](material.angular.io)
+  * [NgRx](ngrx.io)
+  * [ng2-charts]()
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+## Backend stack
+* [node]()
+  * [NestJS](nestjs)
+    * [TypeORM]()
 
-## Development server
+## About the system
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Eagle RP system is built to facilitate the automation of several organization record and resource management processes. It is web-based to allow for easy accessibility and to reduce the reliance on a centralized static system.
 
-## Code scaffolding
+The system is built on modular architecture to allow for easy future expansion of the features and functionality.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Try it
 
-## Build
+Try the system by simply accessing the URL: [http://eagle-erp-demo.web.app/](http://eagle-erp-demo.web.app/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+At the login page, simply input any email and password combination.
 
-## Running unit tests
+## Features
+  ## Organization/institution management
+  Manage information about your organization, including name, location, organizational structure and primary contact information.
+  ## User and employee management
+  * Humar Resource Management
+    * Staff management
+      * Staff hiring
+      * CV and resume management
+      * Progress tracking
+      * Training and personnel develpment
+        * Conferences
+        * Training
+      * Termination
+    * Hiring process documents
+      * Offer letter
+      * Acceptance letter
+    * Staff role assignment
+  * Manage users
+    * Add user
+    * Update user information
+    * Suspend user account
+    * Remove user
+    * View user activity log
+  ## Training programs
+  * Capture all information partaining to training sessions
+  ## Document management
+  Manage documents
+  * Upload documents to the server
+  * Assign users or other tags to documents
+  * Track transfer of custody of physical copies of documents
+  ## Asset management
+  Keep track of all of your organization's physical assets, maintenance history, repair eforts, delapidation and cost. 
+  * Purchase cost
+  * Depretiation value
+  * Repair history
+  * Cost
+  * Time
+  ## Project planning and task management
+  * Project documents
+    * Contract letters
+    * Conditions of contract
+    * drawings and diagrams
+    * bill of quantity
+    * Spcifications
+    * Project schedule
+  ## Sales management
+  * Manage sales records
+  * Manage orders
+  * Check stock
+  ## Logistics management
+  * Fleet
+  * Checkpoints
+  ## Vendor management
+  * Manage vendors
+  * Manage vendor performance and service delivery  quality
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

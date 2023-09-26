@@ -1,0 +1,20 @@
+@startuml [USER] Load Users Failure
+
+set namespaceSeparator ::
+skinparam class {
+    BackgroundColor<<listen>> HoneyDew
+    BackgroundColor<<action>> Wheat
+    BackgroundColor<<dispatch>> Technology
+}
+
+interface "[USER] Load Users Failure" << (A,#FF7700) action >> {
+            variable: loadUsersFailure
+            src: user-management.actions
+            --
+            props<{error: string}>
+
+        }
+
+         
+
+@enduml

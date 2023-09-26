@@ -1,0 +1,19 @@
+@startuml [USERS] Create User
+
+set namespaceSeparator ::
+skinparam class {
+    BackgroundColor<<listen>> HoneyDew
+    BackgroundColor<<action>> Wheat
+    BackgroundColor<<dispatch>> Technology
+}
+
+interface "[USERS] Create User" << (A,#FF7700) action >> {
+            variable: createUser
+            src: user-management.actions
+            --
+            
+        }
+
+         
+
+@enduml

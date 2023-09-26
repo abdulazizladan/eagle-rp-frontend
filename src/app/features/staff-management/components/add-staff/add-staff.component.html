@@ -1,0 +1,52 @@
+<h1 matDialogTitle>Add staff</h1>
+
+<mat-dialog-content [formGroup]="newStaffForm">
+  <mat-horizontal-stepper>
+    <mat-step fxLayout="column" fxLayoutGap="25px" label="Basic information">
+      <div fxFlex="15px"></div>
+      <div fxLayout.xs="column" fxLayout.gt-xs="row" fxLayoutGap="25px">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Staff ID</mat-label>
+          <input matInput formControlName="id">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>First name</mat-label>
+          <input matInput formControlName="firstName">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Middle name</mat-label>
+          <input matInput formControlName="middleName">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Last name</mat-label>
+          <input matInput formControlName="lastName">
+        </mat-form-field>
+
+      </div>
+    </mat-step>
+
+    <mat-step label="Employment" formGroupName="employment" fxLayout="column" fxLayoutGap="25px">
+      <div fxFlex="15px"></div>
+      <mat-form-field appearance="outline">
+        <mat-label>Date of employment</mat-label>
+        <input type="date" matInput formControlName="dateOfEmployment">
+      </mat-form-field>
+    </mat-step>
+
+    <mat-step label="Biodata" fxLayout="column" fxLayoutGap="25px">
+      <div fxFlex="15px"></div>
+
+    </mat-step>
+
+  </mat-horizontal-stepper>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-flat-button color="warn" matDialogClose>Close dialog</button>
+    <button mat-flat-button color="accent" (click)="submit()">Submit</button>
+
+</mat-dialog-actions>

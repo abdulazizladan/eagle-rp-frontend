@@ -1,0 +1,19 @@
+@startuml [USER] Load Users
+
+set namespaceSeparator ::
+skinparam class {
+    BackgroundColor<<listen>> HoneyDew
+    BackgroundColor<<action>> Wheat
+    BackgroundColor<<dispatch>> Technology
+}
+
+interface "[USER] Load Users" << (A,#FF7700) action >> {
+            variable: loadUsers
+            src: user-management.actions
+            --
+            
+        }
+
+         
+
+@enduml

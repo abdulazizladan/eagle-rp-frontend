@@ -1,0 +1,12 @@
+@startuml auth.reducer_AuthReducer
+
+set namespaceSeparator ::
+skinparam class {
+    BackgroundColor<<listen>> HoneyDew
+    BackgroundColor<<action>> Wheat
+    BackgroundColor<<dispatch>> Technology
+}
+
+ 
+
+@enduml

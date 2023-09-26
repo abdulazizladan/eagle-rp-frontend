@@ -1,0 +1,20 @@
+@startuml [USERS] Create User Success
+
+set namespaceSeparator ::
+skinparam class {
+    BackgroundColor<<listen>> HoneyDew
+    BackgroundColor<<action>> Wheat
+    BackgroundColor<<dispatch>> Technology
+}
+
+interface "[USERS] Create User Success" << (A,#FF7700) action >> {
+            variable: createUserSuccess
+            src: user-management.actions
+            --
+            props<{user: User}>
+
+        }
+
+         
+
+@enduml
