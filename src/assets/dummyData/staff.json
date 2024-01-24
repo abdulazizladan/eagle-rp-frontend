@@ -1,0 +1,29 @@
+[
+  {
+    "email": "kasim1212@gmail.com",
+    "firstName": "Kasim",
+    "middleName": "Aliyu",
+    "lastName": "Usman",
+    "gender": "male",
+    "password": "1234",
+    "status": "active"
+  },
+  {
+    "email": "oluwanisola_06@gmail.com",
+    "firstName": "Bolanle",
+    "middleName": "",
+    "lastName": "Oluwanisola",
+    "gender": "male",
+    "password": "1234",
+    "status": "active"
+  },
+  {
+    "email": "cliffordorji@gmail.com",
+    "firstName": "Clifford",
+    "middleName": "",
+    "lastName": "Orji",
+    "gender": "male",
+    "password": "1582",
+    "status": "active"
+  }
+]

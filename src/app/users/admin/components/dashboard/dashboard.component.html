@@ -1,0 +1,178 @@
+<div fxLayout="column" fxLayoutGap="25px">
+
+  <mat-toolbar class="mat-elevation-z4">
+
+    <mat-toolbar-row>
+      <mat-icon>dashboard</mat-icon>
+      <h1>Dashboard</h1>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div class="section" id="banner" fxLayout.xs="column" fxLayout.gt-xs="row" fxLayoutGap="15px">
+    <div id="img" fxFlex.xs="200px" fxFlex.gt-xs="200px"></div>
+    <mat-list dense>
+      <h3 mat-subheader>Albatross Nig LTD</h3>
+      <mat-divider></mat-divider>
+      <mat-list-item>Address: Plot 12-16 Child Avenue, Apapa Lagos</mat-list-item>
+    </mat-list>
+  </div>
+
+  <div class="section" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="25px" fxLayoutGap.gt-xs="0px grid">
+
+    <div class="pills" fxFlex="22%" fxLayout="row" routerLink="users">
+      <span fxFlex="5px"></span>
+      <mat-icon color="accent" fxFlexAlign="center">people</mat-icon>
+      <span fxFlex="5px"></span>
+      <div fxLayout="column">
+        <span>Registered users</span>
+        <mat-divider></mat-divider>
+        <h2>0</h2>
+      </div>
+    </div>
+
+    <div class="pills" fxFlex="22%" fxLayout="row" routerLink="documents">
+      <span fxFlex="5px"></span>
+      <mat-icon color="accent" fxFlexAlign="center">library_books</mat-icon>
+      <span fxFlex="5px"></span>
+      <div fxLayout="column">
+        <span>Documents</span>
+        <mat-divider></mat-divider>
+        <h2>0</h2>
+      </div>
+    </div>
+
+    <div class="pills" fxFlex="22%" fxLayout="row" routerLink="staff">
+      <span fxFlex="5px"></span>
+      <mat-icon color="accent" fxFlexAlign="center">supervised_user_circle</mat-icon>
+      <span fxFlex="5px"></span>
+      <div fxLayout="column">
+        <span>Staff</span>
+        <mat-divider></mat-divider>
+        <h2>0</h2>
+      </div>
+    </div>
+
+    <div class="pills" fxFlex="22%" fxLayout="row" routerLink="assets">
+      <span fxFlex="5px"></span>
+      <mat-icon color="accent" fxFlexAlign="center">event_seat</mat-icon>
+      <span fxFlex="5px"></span>
+      <div fxLayout="column">
+        <span>Assets</span>
+        <mat-divider></mat-divider>
+        <h2>0</h2>
+      </div>
+    </div>
+
+    <div class="pills" fxFlex="22%" fxLayout="row" routerLink="projects">
+      <span fxFlex="5px"></span>
+      <mat-icon color="accent" fxFlexAlign="center">pie_chart</mat-icon>
+      <span fxFlex="5px"></span>
+      <div fxLayout="column">
+        <span>Active projects</span>
+        <mat-divider></mat-divider>
+        <h2>0</h2>
+      </div>
+    </div>
+
+    <div class="pills" fxFlex="22%" fxLayout="row" routerLink="documents">
+      <span fxFlex="5px"></span>
+      <mat-icon color="accent" fxFlexAlign="center">credit_card</mat-icon>
+      <span fxFlex="5px"></span>
+      <div fxLayout="column">
+        <span>Sales</span>
+        <mat-divider></mat-divider>
+        <h2>&#8358;0.00</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <div fxLayout.xs="column" fxLayout.gt-xs="row" fxLayoutGap="25px">
+    <div class="section" fxFlex.sm="50%" fxFlex.gt-sm="60%">
+      <h3>Projects stats</h3>
+      <mat-divider></mat-divider>
+      <canvas
+        baseChart
+        class="chart"
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [type]="barChartType"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)"
+      ></canvas>
+
+    </div>
+
+    <div class="section" fxFlex.sm="50%" fxFlex.gt-sm="40%" style="aspect-ratio: 1/1;">
+      <h3>Notifications</h3>
+      <mat-divider></mat-divider>
+      <mat-nav-list>
+        <mat-list-item fxLayout="row">
+           Item 1
+           <span fxFlex="1 1 auto"></span>
+           01/01/2023 08:00 AM
+        </mat-list-item>
+        <mat-list-item fxLayout="row">
+          Item 2
+          <span fxFlex="1 1 auto"></span>
+           01/01/2023 08:00 AM
+        </mat-list-item>
+        <mat-list-item fxLayout="row">
+          Item 3
+          <span fxFlex="1 1 auto"></span>
+           01/01/2023 08:00 AM
+        </mat-list-item>
+        <mat-list-item fxLayout="row">
+          Item 4
+          <span fxFlex="1 1 auto"></span>
+           01/01/2023 08:00 AM
+        </mat-list-item>
+        <mat-list-item fxLayout="row">
+          Item 5
+          <span fxFlex="1 1 auto"></span>
+           01/01/2023 08:00 AM
+        </mat-list-item>
+        <mat-list-item fxLayout="row">
+          Item 6
+          <span fxFlex="1 1 auto"></span>
+           01/01/2023 08:00 AM
+        </mat-list-item>
+        <mat-list-item >
+          Item 7
+          <span fxFlex="1 1 auto"></span>
+           01/01/2023 08:00 AM
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Asset statistics</h3>
+    <mat-divider></mat-divider>
+
+  </div>
+
+  <div class="section">
+
+  </div>
+
+  <div class="section">
+
+  </div>
+</div>
+
+Information
+<ul>
+  <li>Institution</li>
+  <ul>
+    <li>Name</li>
+    <li>logo</li>
+
+  </ul>
+  <li>Statistics</li>
+  <ul>
+    <li>Number of employees</li>
+    <li>Projects</li>
+  </ul>
+</ul>

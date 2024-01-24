@@ -1,0 +1,61 @@
+<div fxLayout="column" fxLayoutGap="15px">
+  <mat-toolbar class="mat-elevation-z4">
+    <mat-toolbar-row>
+      <h1>Assets</h1>
+      <span fxFlex="1 1 auto"></span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <!--Body-->
+  <div fxLayout.xs="column" fxLayoutGap.xs="25px" id="card-grid" class="mat-elevation-z3" fxLayout.gt-xs="row wrap" fxLayoutGap.gt-xs="25px grid">
+    <div class="card-container" fxFlex.sm="50%" fxFlex.gt-sm="25%">
+      <div class="card" routerLink="sites" fxLayout="column" fxLayoutGap="10px">
+        <span class="key">Sites</span>
+        <span class="value">{{store.sitesCount()}}</span>
+      </div>
+    </div>
+
+    <div class="card-container" fxFlex.sm="50%" fxFlex.gt-sm="25%">
+      <div class="card" routerLink="buildings" fxLayout="column" fxLayoutGap="10px">
+        <span class="key">Buildings</span>
+        <span class="value">{{store.buildingsCount()}}</span>
+      </div>
+    </div>
+
+    <div class="card-container" fxFlex.sm="50%" fxFlex.gt-sm="25%">
+      <div class="card" routerLink="machines" fxLayout="column" fxLayoutGap="10px">
+        <span class="key">Machines</span>
+        <span class="value">{{store.machineryCount()}}</span>
+      </div>
+    </div>
+
+    <div class="card-container" fxFlex.sm="50%" fxFlex.gt-sm="25%">
+      <div class="card" routerLink="tools" fxLayout="column" fxLayoutGap="10px">
+        <span class="key">Tools</span>
+        <span class="value">{{store.toolsCount()}}</span>
+      </div>
+    </div>
+
+    <div class="card-container" fxFlex.sm="50%" fxFlex.gt-sm="25%">
+      <div class="card" routerLink="furniture" fxLayout="column" fxLayoutGap="10px">
+        <span class="key">Furniture</span>
+        <span class="value">{{store.furnitureCount()}}</span>
+      </div>
+    </div>
+
+    <div class="card-container" fxFlex.sm="50%" fxFlex.gt-sm="25%">
+      <div class="card" routerLink="vehicles" fxLayout="column" fxLayoutGap="10px">
+        <span class="key">Vehicles</span>
+        <span class="value">{{store.vehiclesCount()}}</span>
+      </div>
+    </div>
+
+    <div class="card-container" fxFlex.sm="50%" fxFlex.gt-sm="25%">
+      <div class="card" routerLink="vehicles" fxLayout="column" fxLayoutGap="10px">
+        <span class="key">Vehicles</span>
+        <span class="value"> &#8358; {{store.vehiclesCount()}}</span>
+      </div>
+    </div>
+
+  </div>
+</div>

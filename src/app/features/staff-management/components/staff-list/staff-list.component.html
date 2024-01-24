@@ -1,0 +1,76 @@
+<div fxLayout="column" fxLayoutGap="15px">
+  <mat-toolbar class="mat-elevation-z4">
+    <mat-toolbar-row>
+      <h1>Staff</h1>
+      <span fxFlex="1 1 auto"></span>
+      <button mat-flat-button color="accent">
+        <mat-icon>add_person</mat-icon>
+        New staff
+      </button>
+    </mat-toolbar-row>
+    <mat-toolbar-row fxLayout="row">
+      <mat-form-field appearance="outline" fxFlex="100%">
+        <mat-label>Search</mat-label>
+        <input matInput>
+        <mat-icon matSuffix>
+          search
+        </mat-icon>
+      </mat-form-field>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <!--Body-->
+  <table mat-table class="mat-elevation-z2">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>
+        ID
+      </th>
+      <td mat-cell>
+
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="firstName">
+      <th mat-header-cell *matHeaderCellDef>
+        First name
+      </th>
+      <td mat-cell>
+
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="middleName">
+      <th mat-header-cell *matHeaderCellDef>
+        Middle name
+      </th>
+      <td mat-cell>
+
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef>
+        Last name
+      </th>
+      <td mat-cell>
+
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>
+        Actions
+      </th>
+      <td mat-cell>
+
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+  </table>
+</div>

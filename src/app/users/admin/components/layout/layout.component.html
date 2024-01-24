@@ -1,0 +1,106 @@
+<div fxLayout="column" id="main">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>
+          menu
+        </mat-icon>
+      </button>
+      <h2>Eagle RP</h2>
+      <span fxFlex="1 1 auto"></span>
+      <span>Abdulaziz Ladan</span>
+      <button mat-icon-button>
+        <mat-icon>notifications</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="settings">
+          <mat-icon>
+            settings
+          </mat-icon>
+          Settings
+        </button>
+        <button mat-menu-item routerLink="profile">
+          <mat-icon>
+            person_outline
+          </mat-icon>
+          Profile
+        </button>
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>
+            exit_to_app
+          </mat-icon>
+          Logout
+        </button>
+      </mat-menu>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>
+          more_vert
+        </mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container fxFlex="1 1 auto" hasBackdrop="true">
+    <mat-sidenav id="sidenav" #sidenav fxLayout="column" mode="over" opened="true">
+      <div id="user-profile" fxLayout="row" fxLayoutAlign="center center">
+        <div id="profilePic"></div>
+      </div>
+      <div style="text-align: center; color: #464646; background-color: #ffffff;">Abdulaziz Ladan</div>
+      <mat-divider></mat-divider>
+      <button mat-flat-button routerLink="./" routerLinkActive="active" color="primary">
+        <mat-icon>dashboard</mat-icon>
+        Dashboard
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button routerLink="users" routerLinkActive="active" color="primary">
+        <mat-icon>people</mat-icon>
+        Users
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button routerLink="documents" routerLinkActive="active" color="primary">
+        <mat-icon>library_books</mat-icon>
+        Documents
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button routerLink="staff" routerLinkActive="active" color="primary">
+        <mat-icon>group_work</mat-icon>
+        Staff
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button routerLink="training" routerLinkActive="active" color="primary">
+        <mat-icon>class</mat-icon>
+        Training programs
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button routerLink="assets" routerLinkActive="active" color="primary">
+        <mat-icon>work</mat-icon>
+        Assets
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button routerLink="projects" routerLinkActive="active" color="primary">
+        <mat-icon>track_changes</mat-icon>
+        Projects & planning
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button routerLink="sales" routerLinkActive="active" color="primary">
+        <mat-icon>payment</mat-icon>
+        Sales
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button routerLink="logistics" routerLinkActive="active" color="primary">
+        <mat-icon>traffic</mat-icon>
+        Logistics
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button routerLink="vendors" routerLinkActive="active" color="primary">
+        <mat-icon>business</mat-icon>
+        Vendors
+      </button>
+      <mat-divider></mat-divider>
+    </mat-sidenav>
+    <mat-sidenav-content fxLayout="row" fxLayoutAlign="center">
+      <div fxFlex.xs="100%" fxFlex.sm="100%" fxFlex.md="100%" fxFlex.gt-md="1280px"  id="body">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

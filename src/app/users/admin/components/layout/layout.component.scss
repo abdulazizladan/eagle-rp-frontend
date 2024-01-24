@@ -1,0 +1,33 @@
+#body{
+  padding: 20px;
+}
+#main{
+  height: 100%;
+}
+#sidenav{
+  width: 240px;
+  background-color: #444444;
+  #user-profile{
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: #ffffff;
+    color: grey;
+    #profilePic{
+      width: 75%;
+      aspect-ratio: 1/1;
+      border-radius: 100px;
+      background-image: url("./../../../../../assets/img/prof_pic.jpg");
+      background-size: contain;
+      border: 1px solid grey;
+    }
+  }
+  button{
+    width: 100%;
+    color: white
+  }
+  .active{
+    width: 100%;
+    background-color: #444444;
+    color: white;
+  }
+}

@@ -1,0 +1,26 @@
+#card-grid{
+  padding: 25px;
+  .card-container{
+    padding: 25px;
+    .card{
+      background-color: white;
+      box-shadow: 1px 1px 3px rgb(183, 183, 183);
+      border-left: 10px solid turquoise;
+      padding: 25px;
+      font-weight: bold;
+      transition: 1.0s;
+      font-size: larger;
+      .key{
+        font-size: small;
+        font-weight: lighter;
+      }
+      .value{
+        font-size: larger;;
+      }
+    }
+    .card:hover {
+      background-color: rgb(116, 195, 206);
+      cursor: pointer;
+    }
+  }
+}
