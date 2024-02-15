@@ -20,13 +20,15 @@ import { StaffListComponent } from './components/staff-list/staff-list.component
 import { AddStaffComponent } from './components/add-staff/add-staff.component';
 import { StaffDetailsComponent } from './components/staff-details/staff-details.component';
 import { StaffStore } from './store/staff.store';
+import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
 
 
 @NgModule({
   declarations: [
     StaffListComponent,
     AddStaffComponent,
-    StaffDetailsComponent
+    StaffDetailsComponent,
+    ConfirmDeleteComponent
   ],
   imports: [
     CommonModule,

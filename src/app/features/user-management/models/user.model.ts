@@ -7,5 +7,5 @@ export class User {
   "middleName": string;
   "lastName": string;
   "password": string;
-  "status": UserStatus;
+  "isActive": boolean;
 }

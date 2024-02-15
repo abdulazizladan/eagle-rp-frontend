@@ -7,6 +7,12 @@ import { MachineryListComponent } from './components/machinery-list/machinery-li
 import { ToolsListComponent } from './components/tools-list/tools-list.component';
 import { FurnitureListComponent } from './components/furniture-list/furniture-list.component';
 import { VehiclesListComponent } from './components/vehicles-list/vehicles-list.component';
+import { SiteDetailsComponent } from './components/site-details/site-details.component';
+import { BuildingDetailsComponent } from './components/building-details/building-details.component';
+import { MachineDetailsComponent } from './components/machine-details/machine-details.component';
+import { ToolDetailsComponent } from './components/tool-details/tool-details.component';
+import { FurnitureDetailsComponent } from './components/furniture-details/furniture-details.component';
+import { VehicleDetailsComponent } from './components/vehicle-details/vehicle-details.component';
 
 const routes: Routes = [
   {
@@ -15,27 +21,51 @@ const routes: Routes = [
   },
   {
     path: 'sites',
-    component: SitesListComponent
+    component: SitesListComponent,
+  },
+  {
+    path: 'site/:id',
+    component: SiteDetailsComponent
   },
   {
     path: 'buildings',
     component: BuildingsListComponent
   },
   {
+    path: 'building/:id',
+    component: BuildingDetailsComponent
+  },
+  {
     path: 'machines',
     component: MachineryListComponent
+  },
+  {
+    path: 'machine/:id',
+    component: MachineDetailsComponent
   },
   {
     path: 'tools',
     component: ToolsListComponent
   },
   {
+    path: 'tool/:id',
+    component: ToolDetailsComponent
+  },
+  {
     path: 'furniture',
     component: FurnitureListComponent
   },
   {
+    path: 'furniture/:id',
+    component: FurnitureDetailsComponent
+  },
+  {
     path: 'vehicles',
     component: VehiclesListComponent
+  },
+  {
+    path: 'vehicle/:id',
+    component: VehicleDetailsComponent
   }
 ];
 

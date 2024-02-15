@@ -1,0 +1,21 @@
+{
+  "sites": [
+    {
+      "id": "SMR",
+      "code": "ABU-SMR",
+      "name": "Samaru Campus",
+      "buildings": []
+    },
+    {
+      "id": "KNG",
+      "code": "ABU-KNG",
+      "name": "Kongo Campus",
+      "buildings": []
+    }
+  ],
+  "buildings": [],
+  "machines": [],
+  "tools": [],
+  "vehicles": [],
+  "furniture": []
+}

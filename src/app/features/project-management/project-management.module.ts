@@ -21,13 +21,15 @@ import { ProjectDashboardComponent } from './components/project-dashboard/projec
 import { AddProjectComponent } from './components/add-project/add-project.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { ProjectsStore } from './store/projects.store';
+import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
 
 
 @NgModule({
   declarations: [
     ProjectDashboardComponent,
     AddProjectComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    ConfirmDeleteComponent
   ],
   imports: [
     CommonModule,

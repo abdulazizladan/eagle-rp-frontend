@@ -1,6 +1,7 @@
-import { inject } from "@angular/core";
-import { signalStore, withComputed, withHooks, withMethods, withState } from "@ngrx/signals";
+import { computed, inject } from "@angular/core";
+import { patchState, signalStore, withComputed, withHooks, withMethods, withState } from "@ngrx/signals";
 import { DocumentsService } from "../services/documents.service";
+import { Document } from "../models/document.model";
 
 type DocumentState = {
   documents: Document[];
@@ -14,17 +15,27 @@ const initialState: DocumentState = {
 
 export const DocumentStore = signalStore(
   withState(initialState),
-  withComputed(() => ({
-
+  withComputed(({documents}) => ({
+    documentsCount: computed(() => documents().length)
   })),
-  withMethods((store, documentsService = inject(DocumentsService)) => ({
-    loadAll() {
-
+  withMethods((state, documentsService = inject(DocumentsService)) => ({
+    async loadAll() {
+      patchState(state, {documents: []});
+      documentsService.getAll().subscribe((documents) => {
+        patchState(state, {documents})
+      });
+    },
+    add(document: Document) {
+      const newDocument = document;
+      patchState(state, {documents: [...state.documents(), newDocument]})
+    },
+    delete(id: string) {
+      patchState(state, {documents: state.documents().filter(x => x.id !== id)})
     }
   })),
   withHooks({
-    onInit() {
-
+    onInit({loadAll}) {
+      loadAll()
     },
     onDestroy() {
 

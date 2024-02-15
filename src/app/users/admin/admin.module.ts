@@ -21,6 +21,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AdminStore } from './store/admin.store';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     AdminRoutingModule
   ],
   providers: [
-    { provide: NgChartsConfiguration, useValue: { generateColors: false }}
+    { provide: NgChartsConfiguration, useValue: { generateColors: false }},
+    AdminStore
   ]
 })
 export class AdminModule { }

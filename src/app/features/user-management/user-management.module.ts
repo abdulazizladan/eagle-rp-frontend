@@ -16,6 +16,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatListModule } from '@angular/material/list';
 
 import { UserManagementRoutingModule } from './user-management-routing.module';
 import { UsersListComponent } from './components/users-list/users-list.component';
@@ -24,6 +26,7 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
 import { UsersStore } from './store/user.store';
+import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
 
 
 @NgModule({
@@ -32,7 +35,8 @@ import { UsersStore } from './store/user.store';
     UserComponent,
     UserDetailsComponent,
     AddUserComponent,
-    SnackbarComponent
+    SnackbarComponent,
+    ConfirmDeleteComponent
   ],
   imports: [
     CommonModule,
@@ -50,6 +54,8 @@ import { UsersStore } from './store/user.store';
     MatDialogModule,
     MatSnackBarModule,
     MatDividerModule,
+    MatPaginatorModule,
+    MatListModule,
     UserManagementRoutingModule
   ],
   providers: [

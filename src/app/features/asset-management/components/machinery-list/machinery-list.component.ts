@@ -12,7 +12,13 @@ export class MachineryListComponent {
   private dialog = inject(MatDialog);
 
   openDialog() {
-    this.dialog.open(AddMachineryComponent, {});
+    this.dialog.open(
+      AddMachineryComponent,
+      {
+        ariaModal: true,
+        maxWidth: 800
+      }
+    );
   }
 
 }

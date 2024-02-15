@@ -18,11 +18,17 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { VendorManagementRoutingModule } from './vendor-management-routing.module';
 import { VendorsListComponent } from './components/vendors-list/vendors-list.component';
 import { VendorStore } from './store/vendor.store';
+import { VendorDetailsComponent } from './components/vendor-details/vendor-details.component';
+import { AddVendorComponent } from './components/add-vendor/add-vendor.component';
+import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
 
 
 @NgModule({
   declarations: [
-    VendorsListComponent
+    VendorsListComponent,
+    VendorDetailsComponent,
+    AddVendorComponent,
+    ConfirmDeleteComponent
   ],
   imports: [
     CommonModule,

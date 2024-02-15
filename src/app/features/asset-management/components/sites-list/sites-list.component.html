@@ -11,4 +11,56 @@
       </button>
     </mat-toolbar-row>
   </mat-toolbar>
+  <div id="body" class="mat-elevation-z2" fxLayout="column">
+
+    <mat-form-field appearance="outline" fxFlex="100%">
+      <mat-label>Search</mat-label>
+      <input #keyword matInput (keyup)="filter(keyword.value)">
+      <mat-icon matSuffix>
+        search
+      </mat-icon>
+    </mat-form-field>
+
+    @defer(on timer(500)) {
+    <table mat-table [dataSource]="store.sites()">
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>
+          Name
+        </th>
+        <td mat-cell *matCellDef="let site">
+          {{site.name}}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="code">
+        <th mat-header-cell *matHeaderCellDef>
+          Code
+        </th>
+        <td mat-cell *matCellDef="let site">
+          {{site.code}}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>
+          Actions
+        </th>
+        <td mat-cell *matCellDef="let site">
+
+          <button mat-flat-button color="accent">
+            View
+          </button>
+
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    }@placeholder {
+      <mat-progress-bar color="accent" mode="query"></mat-progress-bar>
+    }
+  </div>
 </div>

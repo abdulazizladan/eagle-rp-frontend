@@ -1,18 +1,37 @@
-import { Component, ViewChild, OnInit, inject } from '@angular/core';
+import { Component, ViewChild, OnInit, inject, effect } from '@angular/core';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { BaseChartDirective } from 'ng2-charts';
 import { Store } from '@ngrx/store';
 //import { DashboardData } from '../../models/dashboard-data.model';
 
 
 import DataLabelsPlugin from 'chartjs-plugin-datalabels';
+import { AdminStore } from '../../store/admin.store';
+import { getState } from '@ngrx/signals';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
+  animations: [trigger('loadState', [
+    state('default', style({
+      width: '10%',
+      height: '100%',
+      backgroundColor: 'green'
+    })),
+    state('clicked', style({
+      width: '100%',
+      backgroundColor: 'white'
+    })),
+    transition('default => clicked', animate('1s 200ms ease-in'))
+  ])]
 })
 export class DashboardComponent implements OnInit{
+
+  animationState = 'default';
+
+  store = inject(AdminStore);
 
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
@@ -80,10 +99,17 @@ export class DashboardComponent implements OnInit{
   //private store = inject(Store<{dashboardData: DashboardData}>)
 
   constructor() {
-
+    effect(() => {
+      const adminState = getState(this.store);
+      console.log(`Admin state has changed`, adminState)
+    })
   }
 
   ngOnInit() {
+
+    setTimeout(() => {
+      this.animationState = 'clicked'
+    }, 3000)
     //this.store.dispatch(loadDashboardData())
     //this.dashboardData$ = this.store.select((data) => data.dashboardData)
   }

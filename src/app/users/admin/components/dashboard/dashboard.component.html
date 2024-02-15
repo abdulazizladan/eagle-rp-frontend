@@ -1,7 +1,7 @@
 <div fxLayout="column" fxLayoutGap="25px">
 
-  <mat-toolbar class="mat-elevation-z4">
-
+  <!--<mat-toolbar class="mat-elevation-z4" [@loadState]="animationState">-->
+    <mat-toolbar class="mat-elevation-z4">
     <mat-toolbar-row>
       <mat-icon>dashboard</mat-icon>
       <h1>Dashboard</h1>
@@ -9,17 +9,17 @@
   </mat-toolbar>
 
   <div class="section" id="banner" fxLayout.xs="column" fxLayout.gt-xs="row" fxLayoutGap="15px">
-    <div id="img" fxFlex.xs="200px" fxFlex.gt-xs="200px"></div>
+    <div id="img" fxFlex.xs="50px" fxFlex.gt-xs="200px"></div>
     <mat-list dense>
-      <h3 mat-subheader>Albatross Nig LTD</h3>
+      <h3 mat-subheader>{{store.institution.name()}}</h3>
       <mat-divider></mat-divider>
-      <mat-list-item>Address: Plot 12-16 Child Avenue, Apapa Lagos</mat-list-item>
+      <mat-list-item>Address: {{store.fullAddress() | titlecase}}</mat-list-item>
     </mat-list>
   </div>
 
   <div class="section" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="25px" fxLayoutGap.gt-xs="0px grid">
 
-    <div class="pills" fxFlex="22%" fxLayout="row" routerLink="users">
+    <div class="pills" fxFlex.sm="22%" fxFlex.gt-sm="22%" fxLayout="row" routerLink="users">
       <span fxFlex="5px"></span>
       <mat-icon color="accent" fxFlexAlign="center">people</mat-icon>
       <span fxFlex="5px"></span>
@@ -161,18 +161,3 @@
 
   </div>
 </div>
-
-Information
-<ul>
-  <li>Institution</li>
-  <ul>
-    <li>Name</li>
-    <li>logo</li>
-
-  </ul>
-  <li>Statistics</li>
-  <ul>
-    <li>Number of employees</li>
-    <li>Projects</li>
-  </ul>
-</ul>

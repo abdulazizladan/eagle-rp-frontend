@@ -3,5 +3,4 @@ export class Building{
   "name": string;
   "code": string;
   "cost": number;
-
 }

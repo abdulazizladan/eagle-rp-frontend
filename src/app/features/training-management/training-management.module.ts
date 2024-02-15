@@ -18,11 +18,17 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { TrainingManagementRoutingModule } from './training-management-routing.module';
 import { TrainingDashboardComponent } from './components/training-dashboard/training-dashboard.component';
 import { TrainingStore } from './store/training.store';
+import { TrainingDetailsComponent } from './components/training-details/training-details.component';
+import { AddTrainingComponent } from './components/add-training/add-training.component';
+import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
 
 
 @NgModule({
   declarations: [
-    TrainingDashboardComponent
+    TrainingDashboardComponent,
+    TrainingDetailsComponent,
+    AddTrainingComponent,
+    ConfirmDeleteComponent
   ],
   imports: [
     CommonModule,

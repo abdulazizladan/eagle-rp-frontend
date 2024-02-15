@@ -12,7 +12,13 @@ export class VehiclesListComponent {
   private dialog = inject(MatDialog);
 
   openDialog() {
-    this.dialog.open(AddVehicleComponent, {});
+    this.dialog.open(
+      AddVehicleComponent,
+      {
+        ariaModal: true,
+        maxWidth: 800
+      }
+    );
   }
 
 }

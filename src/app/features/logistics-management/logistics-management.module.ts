@@ -18,11 +18,13 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { LogisticsManagementRoutingModule } from './logistics-management-routing.module';
 import { LogisticsDashboardComponent } from './components/logistics-dashboard/logistics-dashboard.component';
 import { LogisticsStore } from './store/logistics.store';
+import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
 
 
 @NgModule({
   declarations: [
-    LogisticsDashboardComponent
+    LogisticsDashboardComponent,
+    ConfirmDeleteComponent
   ],
   imports: [
     CommonModule,

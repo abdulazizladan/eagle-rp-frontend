@@ -7,7 +7,7 @@
     "lastName": "Usman",
     "gender": "male",
     "password": "1234",
-    "status": "active"
+    "isActive": true
   },
   {
     "id": "1883FZ",
@@ -17,7 +17,7 @@
     "lastName": "Oluwanisola",
     "gender": "male",
     "password": "1234",
-    "status": "active"
+    "isActive": true
   },
   {
     "id": "0283F",
@@ -27,6 +27,6 @@
     "lastName": "Orji",
     "gender": "male",
     "password": "1582",
-    "status": "active"
+    "isActive": false
   }
 ]

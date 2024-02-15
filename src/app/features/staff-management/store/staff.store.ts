@@ -1,4 +1,4 @@
-import { signalStore, withComputed, withHooks, withMethods, withState } from "@ngrx/signals";
+import { patchState, signalStore, withComputed, withHooks, withMethods, withState } from "@ngrx/signals";
 import { Staff } from "../models/staff.model";
 import { computed, inject } from "@angular/core";
 import { StaffService } from "../services/staff.service";
@@ -19,18 +19,38 @@ export const StaffStore = signalStore(
     staffCount: computed(() => state.staff().length)
   })),
   withMethods((state, staffService = inject(StaffService)) => ({
-    loadAll() {
-
+    async loadAll() {
+      patchState(state, { staff: []});
+      staffService.getAll().subscribe((staff) => {
+        patchState(state, { staff });
+      })
     },
-    add() {
-
+    add(staff: Staff) {
+      const newStaff = staff;
+      patchState(state, {
+        staff: [...state.staff(), newStaff],
+        isLoading: false
+      })
     },
     update() {
 
     },
-    delete() {
+    delete(id: string) {
+      const staffId: string = id;
+      patchState(state, {
+        staff: state.staff().filter((x) => x.id != staffId),
+        isLoading: false
+      })
+    }
+  }
+  )
+  ),
+  withHooks({
+    onInit({loadAll}) {
+      loadAll()
+    },
+    onDestroy() {
 
     }
   })
-  )
 )

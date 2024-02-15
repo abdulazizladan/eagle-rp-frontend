@@ -3,7 +3,7 @@
     <mat-toolbar-row>
       <h1>Vendors</h1>
       <span fxFlex="1 1 auto"></span>
-      <button mat-flat-button color="accent">
+      <button mat-flat-button color="accent" (click)="openDialog()">
         <mat-icon>add</mat-icon>
         New vendor
       </button>
@@ -11,4 +11,8 @@
   </mat-toolbar>
   {{store.vendorsCount()}}
   <!--Body-->
+
+  <div class="mat-elevation-z2 body" fxLayout="column" fxLayoutGap="5px">
+
+  </div>
 </div>

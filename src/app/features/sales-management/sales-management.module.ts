@@ -18,12 +18,14 @@ import { SalesManagementRoutingModule } from './sales-management-routing.module'
 import { CreateInvoiceComponent } from './components/create-invoice/create-invoice.component';
 import { SalesRecordComponent } from './components/sales-record/sales-record.component';
 import { SalesStore } from './store/sales.store';
+import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
 
 
 @NgModule({
   declarations: [
     CreateInvoiceComponent,
-    SalesRecordComponent
+    SalesRecordComponent,
+    ConfirmDeleteComponent
   ],
   imports: [
     CommonModule,

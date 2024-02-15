@@ -11,7 +11,7 @@
     <div class="card-container" fxFlex.sm="50%" fxFlex.gt-sm="25%">
       <div class="card" routerLink="sites" fxLayout="column" fxLayoutGap="10px">
         <span class="key">Sites</span>
-        <span class="value">{{store.sitesCount()}}</span>
+        <span class="value">{{store.sites().length}}</span>
       </div>
     </div>
 
@@ -49,13 +49,12 @@
         <span class="value">{{store.vehiclesCount()}}</span>
       </div>
     </div>
-
-    <div class="card-container" fxFlex.sm="50%" fxFlex.gt-sm="25%">
+    <!--<div class="card-container" fxFlex.sm="50%" fxFlex.gt-sm="25%">
       <div class="card" routerLink="vehicles" fxLayout="column" fxLayoutGap="10px">
         <span class="key">Vehicles</span>
         <span class="value"> &#8358; {{store.vehiclesCount()}}</span>
       </div>
-    </div>
+    </div>-->
 
   </div>
 </div>

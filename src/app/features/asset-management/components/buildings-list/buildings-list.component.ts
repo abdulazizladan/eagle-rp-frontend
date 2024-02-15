@@ -12,7 +12,13 @@ export class BuildingsListComponent {
   private dialog = inject(MatDialog);
 
   openDialog() {
-    this.dialog.open(AddBuildingComponent, {});
+    this.dialog.open(
+      AddBuildingComponent,
+      {
+        ariaModal: true,
+        maxWidth: 800
+      }
+    );
   }
 
 }

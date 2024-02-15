@@ -14,6 +14,8 @@ import { AddTaskComponent } from '../add-task/add-task.component';
 export class ProjectDashboardComponent {
 
   store = inject(ProjectsStore);
+  projectsDisplayedColumns: Array<string> =["title", "description", "status", "contractor"];
+  tasksDisplayedColumns: Array<string> =["title", "description", "members", "status", "edd"];
   private dialog = inject(MatDialog);
 
   constructor() {
@@ -24,11 +26,23 @@ export class ProjectDashboardComponent {
   }
 
   openAddProjectDialog() {
-    this.dialog.open(AddProjectComponent);
+    this.dialog.open(
+      AddProjectComponent,
+      {
+        ariaModal: true,
+        maxWidth: 800
+      }
+    );
   }
 
   openAddTaskDialog() {
-    this.dialog.open(AddTaskComponent);
+    this.dialog.open(
+      AddTaskComponent,
+      {
+        ariaModal: true,
+        maxWidth: 800
+      }
+    );
   }
 
 }

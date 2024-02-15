@@ -31,6 +31,13 @@ import { ToolsListComponent } from './components/tools-list/tools-list.component
 import { FurnitureListComponent } from './components/furniture-list/furniture-list.component';
 import { VehiclesListComponent } from './components/vehicles-list/vehicles-list.component';
 import { assetsStore } from './store/assets.store';
+import { SiteDetailsComponent } from './components/site-details/site-details.component';
+import { BuildingDetailsComponent } from './components/building-details/building-details.component';
+import { MachineDetailsComponent } from './components/machine-details/machine-details.component';
+import { VehicleDetailsComponent } from './components/vehicle-details/vehicle-details.component';
+import { ToolDetailsComponent } from './components/tool-details/tool-details.component';
+import { FurnitureDetailsComponent } from './components/furniture-details/furniture-details.component';
+import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
 
 
 @NgModule({
@@ -47,7 +54,14 @@ import { assetsStore } from './store/assets.store';
     MachineryListComponent,
     ToolsListComponent,
     FurnitureListComponent,
-    VehiclesListComponent
+    VehiclesListComponent,
+    SiteDetailsComponent,
+    BuildingDetailsComponent,
+    MachineDetailsComponent,
+    VehicleDetailsComponent,
+    ToolDetailsComponent,
+    FurnitureDetailsComponent,
+    ConfirmDeleteComponent
   ],
   imports: [
     CommonModule,

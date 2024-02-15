@@ -1,6 +1,6 @@
 import { Injectable, Signal, WritableSignal, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, map, of, throwError, throwIfEmpty } from 'rxjs';
+import { Observable, catchError, map, of, throwError, throwIfEmpty, toArray } from 'rxjs';
 import { User } from '../models/user.model';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { UserStatus } from '../enums/userStatus.enum';
@@ -12,7 +12,6 @@ export class UsersService {
 
   private http = inject(HttpClient);
 
-  usersSignal: Signal<User[] | undefined> = toSignal(this.getAll());
   //readonly users = this.usersSignal.asReadonly();
 
   constructor() {
@@ -23,11 +22,13 @@ export class UsersService {
    *
    * @returns Observable of users
    */
-  getAll(): Observable<User[] | any> {
+  getAll(): Observable<User[]> {
     return this.http.get<User[]>(`../assets/dummyData/users.json`).pipe(
-      map(x => {return x}),
-      catchError(x => {return x})
     )
+  }
+
+  getAlls(){
+    return toSignal(this.http.get(`../assets/dummyData/users.json`), {initialValue: []});
   }
 
   getByID(id: string): Observable<User> {

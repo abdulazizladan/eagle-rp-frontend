@@ -1,0 +1,12 @@
+<h1 matDialogTitle>Confirm delete</h1>
+
+<mat-dialog-content>
+    Are you sure you want to delete user?
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-flat-button matDialogClose color="warn">No</button>
+    <span fxFlex="1 1 auto"></span>
+    <button mat-flat-button color="accent" (click)="store.delete(data.id)">Yes</button>
+
+</mat-dialog-actions>

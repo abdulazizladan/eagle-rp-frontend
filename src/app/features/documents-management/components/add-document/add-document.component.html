@@ -1,0 +1,37 @@
+<h1 matDialogTitle>Add document</h1>
+
+<mat-dialog-content>
+    <div fxLayout="column" fxLayoutGap="15px" [formGroup]="newDocumentForm">
+
+      <mat-form-field appearance="outline">
+        <mat-label>ID</mat-label>
+        <input matInput formControlName="id">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Type</mat-label>
+        <mat-select formControlName="type">
+          <mat-option value="letter">Letter</mat-option>
+          <mat-option value="receipt">Receipt</mat-option>
+          <mat-option value="invoice">Invoice</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-flat-button color="warn" matDialogClose>Close dialog</button>
+    <button mat-flat-button color="accent" (click)="submit()" [disabled]="newDocumentForm.invalid">Action</button>
+
+</mat-dialog-actions>

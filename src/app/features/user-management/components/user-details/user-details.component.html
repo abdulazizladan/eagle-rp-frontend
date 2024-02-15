@@ -1,1 +1,82 @@
-<p>user-details works!</p>
+<div fxLayout="column" fxLayoutGap="15px">
+  <mat-toolbar class="mat-elevation-z4">
+    <mat-toolbar-row>
+      <span class="link" routerLink="../">Users</span> / {{id}}
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-card class="mat-elevation-z2">
+    <mat-card-header>
+      <mat-card-title>
+        <h3>User profile</h3>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content fxLayout.xs="column" fxLayout.gt-xs="row" fxLayoutGap="15px">
+
+      <div id="profilePic" fxFlex.gt-xs="240px">
+
+      </div>
+      <div>
+        <mat-list dense>
+          <mat-list-item>First name:</mat-list-item>
+          <mat-list-item>Middle name:</mat-list-item>
+          <mat-list-item>Last name:</mat-list-item>
+          <mat-list-item>Email:</mat-list-item>
+          <mat-list-item>Gender:</mat-list-item>
+        </mat-list>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      <span>Status: Active </span>
+      &nbsp;
+      <mat-slide-toggle></mat-slide-toggle>
+    </mat-card-actions>
+  </mat-card>
+
+  <div id="'main" class="mat-elevation-z2 card">
+    <h3>User Activity log</h3>
+    <table mat-table>
+
+      <ng-container matColumnDef="activity">
+        <th mat-header-cell *matHeaderCellDef>
+          Action
+        </th>
+        <td mat-cell *matCellDef>
+
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>
+          Date
+        </th>
+        <td mat-cell *matCellDef>
+
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="time">
+        <th mat-header-cell *matHeaderCellDef>
+          Time
+        </th>
+        <td mat-cell *matCellDef>
+
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
+
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+  </div>
+
+  <div class="mat-elevation-z2">
+
+  </div>
+
+  <div class=""></div>
+
+</div>

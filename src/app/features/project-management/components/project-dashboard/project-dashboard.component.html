@@ -7,39 +7,161 @@
   </mat-toolbar>
 
   <!--Body-->
-  <mat-tab-group>
-    <mat-tab label="Projects">
-      <mat-toolbar>
-        <span fxflex="1 1 auto"></span>
-        <button mat-flat-button color="accent" (click)="openAddProjectDialog()">
-          <mat-icon>add</mat-icon>
-          Add project
-        </button>
+  <div class="mat-elevation-z2 body">
+  <mat-tab-group color="accent">
+    <mat-tab label="Projects" fxlayout="column" fxLayoutGap="5px">
+      <mat-toolbar class="mat-elevation-z4">
+        <mat-toolbar-row>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="accent" (click)="openAddProjectDialog()">
+            <mat-icon>add</mat-icon>
+            Add project
+          </button>
+        </mat-toolbar-row>
       </mat-toolbar>
-      Projects
-      <ul>
-        <li>Title</li>
-        <li>Description</li>
-        <li>Status</li>
-        <li>Contractor</li>
-      </ul>
+
+      <div fxLayout="column" fxLayoutGap="15px">
+
+        @defer(on timer(500)) {
+
+          <mat-form-field appearance="outline">
+            <mat-label>Searc</mat-label>
+            <input matInput>
+            <mat-icon matSuffix>
+              search
+            </mat-icon>
+          </mat-form-field>
+
+          <table mat-table>
+
+            <ng-container matColumnDef="title">
+              <th mat-header-cell *matHeaderCellDef>
+                Title
+              </th>
+              <td mat-cell *matCellDef>
+
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="description">
+              <th mat-header-cell *matHeaderCellDef>
+                description
+              </th>
+              <td mat-cell *matCellDef>
+
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef>
+                Status
+              </th>
+              <td mat-cell *matCellDef>
+
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="contractor">
+              <th mat-header-cell *matHeaderCellDef>
+                Contractor
+              </th>
+              <td mat-cell *matCellDef>
+
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="projectsDisplayedColumns"></tr>
+
+            <tr mat-row *matRowDef="let row; columns: projectsDisplayedColumns;" routerLink={{row.id}}></tr>
+          </table>
+        }@placeholder {
+          <mat-progress-bar color="accent" mode="query"></mat-progress-bar>
+        }
+
+      </div>
+
     </mat-tab>
-    <mat-tab label="Tasks">
-      <mat-toolbar>
-        <span fxflex="1 1 auto"></span>
-        <button mat-flat-button color="accent" (click)="openAddTaskDialog()">
-          <mat-icon>add</mat-icon>
-          Add task
-        </button>
+    <mat-tab label="Tasks" fxlayout="column" fxLayoutGap="15px">
+      <mat-toolbar class="mat-elevation-z4">
+        <mat-toolbar-row>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="accent" (click)="openAddTaskDialog()">
+            <mat-icon>add</mat-icon>
+            Add task
+          </button>
+        </mat-toolbar-row>
       </mat-toolbar>
-      Tasks
-      <ul>
-        <li>Title</li>
-        <li>Description</li>
-        <li>Members</li>
-        <li>Status</li>
-        <li>EDD</li>
-      </ul>
+
+      <div class="mat-elevation-z2 body" fxLayout="column" fxLayoutGap="5px">
+
+        @defer(on timer(500)) {
+
+          <mat-form-field appearance="outline">
+            <mat-label>Searc</mat-label>
+            <input matInput>
+            <mat-icon matSuffix>
+              search
+            </mat-icon>
+          </mat-form-field>
+
+          <table mat-table>
+
+            <ng-container matColumnDef="title">
+              <th mat-header-cell *matHeaderCellDef>
+                Title
+              </th>
+              <td mat-cell *matCellDef>
+
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="description">
+              <th mat-header-cell *matHeaderCellDef>
+                description
+              </th>
+              <td mat-cell *matCellDef>
+
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="members">
+              <th mat-header-cell *matHeaderCellDef>
+                Members
+              </th>
+              <td mat-cell *matCellDef>
+
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef>
+                Status
+              </th>
+              <td mat-cell *matCellDef>
+
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="edd">
+              <th mat-header-cell *matHeaderCellDef>
+                EDD
+              </th>
+              <td mat-cell *matCellDef>
+
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="tasksDisplayedColumns"></tr>
+
+            <tr mat-row *matRowDef="let row; columns: tasksDisplayedColumns;" routerLink={{row.id}}></tr>
+          </table>
+        }@placeholder {
+          <mat-progress-bar color="accent" mode="query"></mat-progress-bar>
+        }
+
+      </div>
+
     </mat-tab>
   </mat-tab-group>
+  </div>
 </div>

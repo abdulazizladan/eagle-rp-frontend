@@ -3,6 +3,12 @@
     "id": "121234",
     "title": "Proposal for stuff",
     "description": "A letter to whom it may concern",
-    "file": "abc.pdf"
+    "type": "proposal"
+  },
+  {
+    "id": "218546",
+    "title": "Financial proposal",
+    "description": "Eagle RP deployment financial proposal",
+    "type": "proposal"
   }
 ]

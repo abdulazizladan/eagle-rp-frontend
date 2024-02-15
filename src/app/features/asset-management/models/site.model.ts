@@ -1,4 +1,4 @@
-import { Building } from "./building.model";
+import { Building } from "./building/building.model";
 
 export class Site {
   "id": string;

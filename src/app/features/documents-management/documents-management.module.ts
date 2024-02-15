@@ -18,11 +18,17 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { DocumentsManagementRoutingModule } from './documents-management-routing.module';
 import { DocumentsListComponent } from './components/documents-list/documents-list.component';
 import { DocumentStore } from './store/documents.store';
+import { DocumentsDetailComponent } from './components/documents-detail/documents-detail.component';
+import { AddDocumentComponent } from './components/add-document/add-document.component';
+import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
 
 
 @NgModule({
   declarations: [
-    DocumentsListComponent
+    DocumentsListComponent,
+    DocumentsDetailComponent,
+    AddDocumentComponent,
+    ConfirmDeleteComponent
   ],
   imports: [
     CommonModule,

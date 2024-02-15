@@ -12,7 +12,13 @@ export class FurnitureListComponent {
   private dialog = inject(MatDialog);
 
   openDialog() {
-    this.dialog.open(AddFurnitureComponent, {});
+    this.dialog.open(
+      AddFurnitureComponent,
+      {
+        ariaModal: true,
+        maxWidth: 800
+      }
+    );
   }
 
 }

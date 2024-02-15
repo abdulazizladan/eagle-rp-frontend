@@ -12,7 +12,13 @@ export class ToolsListComponent {
   private dialog = inject(MatDialog);
 
   openDialog() {
-    this.dialog.open(AddToolComponent, {});
+    this.dialog.open(
+      AddToolComponent,
+      {
+        ariaModal: true,
+        maxWidth: 800
+      }
+    );
   }
 
 }
