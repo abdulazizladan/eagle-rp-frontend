@@ -9,6 +9,105 @@
   </mat-toolbar>
 
   <!--Body-->
-  <div id="body">
+  <div class="body mat-elevation-z2" fxLayout="column" fxLayoutGap="15px">
+    <h3>
+      <mat-icon>person</mat-icon>
+      Basic Information
+    </h3>
+    <mat-divider></mat-divider>
+    <div fxLayout="row">
+      <div id="profilePic" fxFlex.xs="100%" fxFlex.gt-xs="240px"></div>
+    </div>
+    <mat-list>
+      <mat-list-item>First name: {{staff?.basicInfo?.firstName}}</mat-list-item>
+      <mat-list-item>Middle name: {{staff?.basicInfo?.middleName}}</mat-list-item>
+      <mat-list-item>Last name: {{staff?.basicInfo?.lastName}}</mat-list-item>
+    </mat-list>
+  </div>
 
+  <div class="body mat-elevation-z2">
+    <h3>Contact information</h3>
+    <mat-divider></mat-divider>
+    <mat-list>
+      <mat-list-item>Phone number: +234 {{staff?.contactInfo?.phoneNumber}}</mat-list-item>
+      <mat-list-item>Email: {{staff?.contactInfo?.email}}</mat-list-item>
+      <mat-list-item>Residential Address: {{staff?.contactInfo?.email}}</mat-list-item>
+    </mat-list>
+  </div>
+
+  <div class="body mat-elevation-z2">
+    <h3>Biodata</h3>
+    <mat-divider></mat-divider>
+    <mat-list>
+      <mat-list-item>Date of birth: {{staff?.biodata?.dateOfBirth}}</mat-list-item>
+      <mat-list-item>Gender: {{staff?.biodata?.gender | titlecase}}</mat-list-item>
+      <mat-list-item>Blood group: {{staff?.biodata?.bloodGroup}}</mat-list-item>
+    </mat-list>
+  </div>
+
+  <div class="body mat-elevation-z2">
+    <h3>Skills</h3>
+    <mat-divider></mat-divider>
+    <mat-list>
+      <mat-list-item>
+        Skill
+        <span fxFlex="1 1 auto"></span>
+        Score (/10)
+      </mat-list-item>
+      <mat-list-item>
+        Skill
+        <span fxFlex="1 1 auto"></span>
+        Score (/10)
+      </mat-list-item>
+    </mat-list>
+  </div>
+
+  <div class="body mat-elevation-z2">
+    <h3>Work experience</h3>
+    <mat-divider></mat-divider>
+  </div>
+
+  <div class="body mat-elevation-z2">
+    <h3>Education</h3>
+    @if(staff) {
+      {{staff.educationHistory}}
+    }
+    <mat-divider></mat-divider>
+  </div>
+
+  <div class="body mat-elevation-z2">
+    <h3>Payment history</h3>
+    <mat-divider></mat-divider>
+    <ul>
+      <li>
+        Payment requests
+        <ul>
+          <li>Pending</li>
+          <li>Declined</li>
+          <li>Processed</li>
+        </ul>
+      </li>
+      <li>Salary history</li>
+    </ul>
+  </div>
+
+  <div class="body mat-elevation-z2">
+    <h3>Documents</h3>
+    <mat-divider></mat-divider>
+    <ul>
+      <li>Title</li>
+      <li>Summary</li>
+      <li>Thumbnail</li>
+    </ul>
+  </div>
+
+  <div class="body mat-elevation-z2">
+    <h3>Emergency contacts</h3>
+    <mat-divider></mat-divider>
+    <ul>
+      <li>Full name</li>
+      <li>Relationship</li>
+      <li>phone number</li>
+      <li>Address</li>
+    </ul>
   </div>

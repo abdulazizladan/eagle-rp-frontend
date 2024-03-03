@@ -1,1 +1,22 @@
-<p>confirm-delete works!</p>
+<h1 matDialogTitle>Title</h1>
+
+<mat-dialog-content>
+    Are you sure you want to delete?
+    <br>
+    Why are you deleting?
+    <mat-form-field appearance="outline">
+      <mat-label>Reason for deleting</mat-label>
+      <mat-select #reason>
+        <mat-option value=""></mat-option>
+        <mat-option value="error">File was uploaded in error</mat-option>
+        <mat-option value="missing">File missing</mat-option>
+      </mat-select>
+    </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-flat-button color="warn" matDialogClose>No</button>
+    <span fxFlex="1 1 auto"></span>
+    <button mat-flat-button color="accent" (click)="delete()" [disabled]="!reason.value">Yes</button>
+
+</mat-dialog-actions>

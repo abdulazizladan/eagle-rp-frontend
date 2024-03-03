@@ -1,10 +1,11 @@
 #body{
   padding: 15px;
 }
-tr{
-  transition: 0.8s;
-  cursor: pointer;
+
+th{
+  font-weight: bolder;
 }
-tr:hover{
-  background-color: #cccccc;
+tr:nth-child(even){
+  background-color: #f2f2f2;
 }
+

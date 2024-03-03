@@ -51,7 +51,7 @@ export const UsersStore = signalStore(
         patchState(
           state,
           {
-            users: state.users().map((u) => (u.id === id ? user : u)),
+            users: state.users().map((user: User) => (user.id === id ? user : user)),
             isLoading: false
           }
         );
@@ -60,7 +60,7 @@ export const UsersStore = signalStore(
         const deleteId = id;
         patchState(
           state, {
-            users: state.users().filter((x) => x.id != deleteId),
+            users: state.users().filter((user) => user.id != deleteId),
             isLoading: false
           }
         )

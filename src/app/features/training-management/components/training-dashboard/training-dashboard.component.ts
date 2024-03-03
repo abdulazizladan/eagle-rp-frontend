@@ -27,7 +27,7 @@ export class TrainingDashboardComponent {
     }
   ]
 
-  displayedColumns: Array<string> = ["title", "description", "facilitators"];
+  displayedColumns: Array<string> = ["title", "description", "facilitators", "action"];
 
   store = inject(TrainingStore);
   private dialog = inject(MatDialog);

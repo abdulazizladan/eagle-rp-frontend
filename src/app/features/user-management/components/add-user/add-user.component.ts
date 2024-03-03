@@ -1,12 +1,10 @@
-import { ChangeDetectionStrategy, Component, OnInit, Output, inject, EventEmitter, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef, MatDialog } from '@angular/material/dialog';
+import { Component, inject } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SnackbarComponent } from '../snackbar/snackbar.component';
 import { UsersStore } from '../../store/user.store';
 import { UserStatus } from '../../enums/userStatus.enum';
-import { User } from '../../models/user.model';
-import { UserState } from '../../store/user.interface';
 
 @Component({
   selector: 'app-add-user',
@@ -37,7 +35,7 @@ export class AddUserComponent {
   });
 
   openSnackbar() {
-    this.snackbar.openFromComponent(SnackbarComponent, {duration: 3000})
+    this.snackbar.open("User added successfully", "Close", {duration: 3000})
   }
 
   submit() {
@@ -46,8 +44,5 @@ export class AddUserComponent {
     this.openSnackbar();
     this.dialogRef.close();
   }
-  /**
-   *
-   */
 
 }

@@ -71,7 +71,8 @@ export class UsersListComponent implements OnInit, OnDestroy {
   }
 
   openDeleteDialog(id: string) {
-    this.dialog.open(ConfirmDeleteComponent, {data: id})
+    const userId = id;
+    this.dialog.open(ConfirmDeleteComponent, {data: userId})
   }
 
 }

@@ -1,5 +1,3 @@
-import { UserStatus } from "../enums/userStatus.enum";
-
 export class User {
   "id": string;
   "email": string;

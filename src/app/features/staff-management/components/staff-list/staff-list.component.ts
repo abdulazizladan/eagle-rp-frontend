@@ -3,6 +3,7 @@ import { StaffStore } from '../../store/staff.store';
 import { getState } from '@ngrx/signals';
 import { MatDialog } from '@angular/material/dialog';
 import { AddStaffComponent } from '../add-staff/add-staff.component';
+import { ConfirmDeleteComponent } from '../confirm-delete/confirm-delete.component';
 
 @Component({
   selector: 'app-staff-list',
@@ -32,6 +33,14 @@ export class StaffListComponent {
         maxWidth: 800
       }
       )
+  }
+
+  openConfirmDeleteDialog(): void {
+    this.dialog.open(ConfirmDeleteComponent)
+  }
+
+  filter(keyword: string) {
+
   }
 
 }

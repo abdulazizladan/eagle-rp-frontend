@@ -1,31 +1,307 @@
-<h1 matDialogTitle>Title</h1>
+<h1 matDialogTitle>New staff</h1>
 
-<mat-dialog-content fxLayout="column" fxLayoutGap="15px" [formGroup]="newStaffForm">
+<mat-dialog-content fxLayout="column" fxLayoutGap="15px">
+  <mat-horizontal-stepper linear [formGroup]="newStaffForm">
 
-    <mat-form-field appearance="outline">
-      <mat-label>ID</mat-label>
-      <input matInput formControlName="id">
-    </mat-form-field>
+    <mat-step formGroupName="basicInfo" [stepControl]="basicInfo">
+      <ng-template matStepLabel>Basic information</ng-template>
 
-    <mat-form-field appearance="outline">
-      <mat-label>First name</mat-label>
-      <input matInput formControlName="firstName">
-    </mat-form-field>
+      <div fxLayout="column" fxLayoutGap="15px">
+        <div></div>
+        <div fxLayout="row wrap" fxLayoutGap="15px grid">
 
-    <mat-form-field appearance="outline">
-      <mat-label>Middle name</mat-label>
-      <input matInput formControlName="middleName">
-    </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25%">
+          <mat-label>ID</mat-label>
+          <input matInput formControlName="id">
+        </mat-form-field>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Last name</mat-label>
-      <input matInput formControlName="lastName">
-    </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="75%">
+          <mat-label>First name</mat-label>
+          <input matInput formControlName="firstName">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="50%">
+          <mat-label>Middle name</mat-label>
+          <input matInput formControlName="middleName">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="50%">
+          <mat-label>Last name</mat-label>
+          <input matInput formControlName="lastName">
+        </mat-form-field>
+      </div>
+      <div fxFlayout="row">
+        <span fxFlex="1 1 auto"></span>
+        <button mat-flat-button color="accent" matStepperNext>
+          Next
+          <mat-icon matIconSuffix>
+            arrow_forward
+          </mat-icon>
+        </button>
+      </div>
+    </div>
+
+    </mat-step>
+
+    <mat-step formGroupName="biodata">
+      <ng-template matStepLabel>Biodata</ng-template>
+      <div fxLayout="column" fxLayoutGap="15px">
+
+        <div></div>
+
+        <div fxLayout="row wrap" fxLayoutGap="15px grid">
+
+          <mat-form-field appearance="outline" fxFlex="50%">
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender">
+              <mat-option value="male">Male</mat-option>
+              <mat-option value="female">Female</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" fxFlex="50%">
+            <mat-label>Blood group</mat-label>
+            <mat-select formControlName="bloodGroup">
+              <mat-option value="O+">O +ve</mat-option>
+              <mat-option value="O-">O -ve</mat-option>
+              <mat-option value="A-">A -ve</mat-option>
+              <mat-option value="A+">A +ve</mat-option>
+              <mat-option value="B-">B -ve</mat-option>
+              <mat-option value="B+">B +ve</mat-option>
+              <mat-option value="AB+">AB +ve</mat-option>
+              <mat-option value="AB-">AB -ve</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" fxFlex="50%">
+            <mat-label>Date of birth</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName>
+            <mat-hint>MM/DD/YY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div fxFlayout="row">
+          <button mat-flat-button color="accent" matStepperPrevious>
+            <mat-icon matIconPrefix>
+              arrow_back
+            </mat-icon>
+            Back
+          </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="accent" matStepperNext>
+            Next
+            <mat-icon matIconSuffix>
+              arrow_forward
+            </mat-icon>
+          </button>
+        </div>
+
+      </div>
+
+    </mat-step>
+
+    <mat-step formGroupName="contactInfo">
+      <ng-template matStepLabel>Contact information</ng-template>
+
+      <div fxLayout="column" fxLayoutGap="15px">
+        <div></div>
+      <div fxLayout="row wrap" fxLayoutGap="15px grid">
+
+        <mat-form-field appearance="outline" fxFlex="100%">
+          <mat-label>Phone number</mat-label>
+          <span matPrefix>
+            +234
+          </span>
+          <input matInput formControlName="phoneNumber">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="100%">
+          <mat-label>email</mat-label>
+          <input matInput formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="100%">
+          <mat-label>Home address</mat-label>
+          <input matInput formControlName="homeAddress">
+        </mat-form-field>
+
+      </div>
+
+      <div fxFlayout="row">
+        <button mat-flat-button color="accent" matStepperPrevious>
+          <mat-icon matIconPrefix>
+            arrow_back
+          </mat-icon>
+          Back
+        </button>
+        <span fxFlex="1 1 auto"></span>
+        <button mat-flat-button color="accent" matStepperNext>
+          Next
+          <mat-icon matIconSuffix>
+            arrow_forward
+          </mat-icon>
+        </button>
+      </div>
+      </div>
+    </mat-step>
+
+    <mat-step formArrayName="employmentHistory">
+      <ng-template matStepLabel>Employment history</ng-template>
+
+
+      <div fxLayout="column" fxLayoutGap="15px">
+        <div></div>
+        <div fxLayout="column" fxLayoutGap="15px">
+        @if(employmentHistory) {
+          @for(employmentRecord of employmentHistory.controls; track employmentRecord; let index = $index) {
+            <div fxLayout="row wrap" [formGroupName]="index" fxLayoutGap="15px">
+
+              <mat-form-field appearance="outline" fxFlex="40%%">
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title">
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" fxFlex="60%">
+                <mat-label>Employer</mat-label>
+                <input matInput formControlName="employer">
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" fxFlex="220px">
+                <mat-label>From</mat-label>
+                <input matInput formControlName="from">
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" fxFlex="220px">
+                <mat-label>To</mat-label>
+                <input matInput formControlName="to">
+              </mat-form-field>
+
+              <button mat-icon-button color="warn" (click)="removeEmployment(index)">
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </div>
+            <mat-divider></mat-divider>
+          }
+        }
+      </div>
+
+        <div fxLayout="row">
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="accent" (click)="addEmployment()">
+            <mat-icon>add</mat-icon>
+            Add employment
+          </button>
+        </div>
+
+        <div fxFlayout="row">
+          <button mat-flat-button color="accent" matStepperPrevious>
+            <mat-icon matIconPrefix>
+              arrow_back
+            </mat-icon>
+            Back
+          </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="accent" matStepperNext>
+            Next
+            <mat-icon matIconSuffix>
+              arrow_forward
+            </mat-icon>
+          </button>
+        </div>
+      </div>
+
+    </mat-step>
+
+    <mat-step formArrayName="educationHistory">
+      <ng-template matStepLabel>Education history</ng-template>
+
+        <div fxLayout="column" fxLayoutGap="15px">
+
+          @if(educationHistory) {
+            @for(educationRecord of educationHistory.controls; track educationRecord; let index = $index) {
+              <div fxLayout="row wrap" fxLayoutGap="15px" [formGroupName]="index">
+
+                <mat-form-field fxFlex="100%" appearance="outline">
+                  <mat-label>Name of institution</mat-label>
+                  <input matInput formControlName="institution">
+                </mat-form-field>
+
+                <mat-form-field fxFlex="100px" appearance="outline">
+                  <mat-label>Year of graduation</mat-label>
+                  <input matInput formControlName="yearOfCompletion">
+                </mat-form-field>
+
+                <mat-form-field fxFlex="1 1 auto" appearance="outline">
+                  <mat-label>Certification</mat-label>
+                  <input matInput formControlName="certification">
+                </mat-form-field>
+
+                <button mat-icon-button color="warn" (click)="removeEducation(index)">
+                  <mat-icon>
+                    cancel
+                  </mat-icon>
+                </button>
+              </div>
+              <mat-divider></mat-divider>
+            }
+          }
+
+          <div fxLayout="row">
+            <span fxFlex="1 1 auto"></span>
+            <button mat-flat-button color="accent" (click)="addEducation()">
+              <mat-icon>add</mat-icon>
+              Add education
+            </button>
+          </div>
+
+          <div fxFlayout="row">
+            <button mat-flat-button color="accent" matStepperPrevious>
+              <mat-icon matIconPrefix>
+                arrow_back
+              </mat-icon>
+              Back
+            </button>
+            <span fxFlex="1 1 auto"></span>
+            <button mat-flat-button color="accent" matStepperNext>
+              Next
+              <mat-icon matIconSuffix>
+                arrow_forward
+              </mat-icon>
+            </button>
+          </div>
+        </div>
+    </mat-step>
+
+    <mat-step label="Emergency contact">
+      <ng-template matStepLabel="Emergency Contact"></ng-template>
+
+      <div fxLayout="column" fxLayoutGap="15px">
+
+        <div></div>
+
+        <div fxLayout="row wrap" fxLayoutGap="15px">
+
+        </div>
+
+        <div fxFlayout="row">
+          <button mat-flat-button color="accent" matStepperPrevious>
+            <mat-icon matIconPrefix>
+              arrow_back
+            </mat-icon>
+            Back
+          </button>
+          <span fxFlex="1 1 auto"></span>
+
+          <button mat-flat-button color="accent" (click)="submit()">
+            Submit
+          </button>
+
+        </div>
+      </div>
+    </mat-step>
+
+  </mat-horizontal-stepper>
 
 </mat-dialog-content>
-
-<mat-dialog-actions>
-  <button mat-flat-button matDialogClose color="warn">Close dialog</button>
-  <span fxFlex="1 1 auto"></span>
-  <button mat-flat-button color="accent" [disabled]="newStaffForm.invalid" (click)="submit()">Submit</button>
-</mat-dialog-actions>

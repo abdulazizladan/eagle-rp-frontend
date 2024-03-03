@@ -17,17 +17,24 @@
 
       </div>
       <div>
-        <mat-list dense>
-          <mat-list-item>First name:</mat-list-item>
-          <mat-list-item>Middle name:</mat-list-item>
-          <mat-list-item>Last name:</mat-list-item>
-          <mat-list-item>Email:</mat-list-item>
-          <mat-list-item>Gender:</mat-list-item>
+        <mat-list>
+          <mat-list-item><span class="label">First name:</span> {{user?.firstName}}</mat-list-item>
+          <mat-list-item><span class="label">Middle name:</span>
+            @if(user?.middleName) {
+              {{user?.middleName}}
+            }@else {
+             ---
+            }
+          </mat-list-item>
+          <mat-list-item><span class="label">Last name:</span> {{user?.lastName}}</mat-list-item>
+          <mat-list-item><span class="label">Email:</span> {{user?.email}}</mat-list-item>
         </mat-list>
       </div>
     </mat-card-content>
 
-    <mat-card-actions align="end">
+    <mat-card-actions>
+      <button mat-flat-button color="accent" (click)="openResetDialog()">Reset password</button>
+      <span fxFlex="1 1 auto"></span>
       <span>Status: Active </span>
       &nbsp;
       <mat-slide-toggle></mat-slide-toggle>

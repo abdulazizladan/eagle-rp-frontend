@@ -1,26 +1,33 @@
-import { Component, Input, OnInit, Inject, inject, ChangeDetectionStrategy } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, Inject, inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { UsersStore } from '../../store/user.store';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-confirm-delete',
   templateUrl: './confirm-delete.component.html',
-  styleUrl: './confirm-delete.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrl: './confirm-delete.component.scss'
 })
-export class ConfirmDeleteComponent implements OnInit {
+export class ConfirmDeleteComponent {
 
   public store = inject(UsersStore);
+  private dialogRef = inject(MatDialogRef<ConfirmDeleteComponent>);
+  private snackbar = inject(MatSnackBar)
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: {id: string}) {
-
+  constructor(
+    @Inject(MAT_DIALOG_DATA)
+    public id: string
+    ) {
   }
 
-  ngOnInit(): void {
-
+  openSnackbar() {
+    this.snackbar.open("User removed successfully", "Close", {duration: 3000})
   }
 
-  confirm() {
+  confirmDelete() {
+    this.store.delete(this.id);
+    this.openSnackbar();
+    this.dialogRef.close();
   }
 
 }

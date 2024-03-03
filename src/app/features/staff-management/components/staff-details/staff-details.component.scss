@@ -1,8 +1,17 @@
-#body {
+.body {
   padding: 15px;
+  div{
+    #profilePic{
+      aspect-ratio: 1/1;
+      background-color: grey;
+    }
+  }
 }
 #link {
   color: blue;
   text-decoration: underline;
   cursor: pointer;
+}
+mat-list-item{
+  border-bottom: 1px solid grey;
 }

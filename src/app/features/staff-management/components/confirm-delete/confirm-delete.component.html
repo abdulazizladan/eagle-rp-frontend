@@ -1,1 +1,21 @@
-<p>confirm-delete works!</p>
+<h1 matDialogTitle>Confirm delete</h1>
+
+<mat-dialog-content>
+    What is your reason for deleting this staff?
+    <mat-form-field appearance="outline">
+      <mat-label>Reason</mat-label>
+      <mat-select>
+        <mat-option value="resignation">The staff has resigned</mat-option>
+        <mat-option value="death">The staff is deceased</mat-option>
+        <mat-option value="dismissal">The staff was sacked</mat-option>
+        <mat-option value="retirement">The staff has retired</mat-option>
+      </mat-select>
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-flat-button color="warn" matDialogClose>Close dialog</button>
+    <span fxFlex="1 1 auto"></span>
+    <button mat-flat-button color="accent" disabled>Action</button>
+
+</mat-dialog-actions>

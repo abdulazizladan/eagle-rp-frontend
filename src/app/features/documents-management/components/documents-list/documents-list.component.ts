@@ -3,6 +3,7 @@ import { DocumentStore } from '../../store/documents.store';
 import { getState } from '@ngrx/signals';
 import { MatDialog } from '@angular/material/dialog';
 import { AddDocumentComponent } from '../add-document/add-document.component';
+import { ConfirmDeleteComponent } from '../confirm-delete/confirm-delete.component';
 
 @Component({
   selector: 'app-documents-list',
@@ -30,6 +31,17 @@ export class DocumentsListComponent {
       {
         ariaModal: true,
         maxWidth: 800
+      }
+    )
+  }
+
+  openConfirmDelete(id: string) {
+    this.dialog.open(
+      ConfirmDeleteComponent,
+      {
+        ariaModal: true,
+        maxWidth: 800,
+        data : id
       }
     )
   }

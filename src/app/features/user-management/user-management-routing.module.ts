@@ -12,7 +12,7 @@ const routes: Routes = [
   {
     path: ':id',
     component: UserDetailsComponent,
-    data: {id: ''}
+    data: {id: '', user: {}}
   }
 ];
 

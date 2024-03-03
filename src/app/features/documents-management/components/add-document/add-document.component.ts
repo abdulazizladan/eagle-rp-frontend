@@ -31,7 +31,7 @@ export class AddDocumentComponent {
   submit() {
     const newDocument = this.newDocumentForm.value;
     this.store.add(newDocument);
-    this.snackBar.open("Document added successfully.", "Close")
+    this.snackBar.open("Document added successfully.", "Close", {duration: 3000})
     this.dialogRef.close();
   }
 

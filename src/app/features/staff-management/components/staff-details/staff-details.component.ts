@@ -1,5 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { StaffStore } from '../../store/staff.store';
+import { Staff } from '../../models/staff.model';
 
 @Component({
   selector: 'app-staff-details',
@@ -9,13 +11,16 @@ import { ActivatedRoute } from '@angular/router';
 export class StaffDetailsComponent implements OnInit{
 
   id: string | null = "";
-  private route = inject(ActivatedRoute)
+  private route = inject(ActivatedRoute);
+  staff: Staff | undefined = undefined;
+  store = inject(StaffStore);
 
   constructor() {
 
   }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.paramMap.get('id')
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.staff = this.store.staff().find(staff => staff.basicInfo.id == this.id)
   }
 }

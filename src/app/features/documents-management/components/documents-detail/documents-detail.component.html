@@ -1,5 +1,39 @@
-<mat-toolbar class="mat-elevation-z4">
-  <mat-toolbar-row>
-    <span class="link" routerLink="../">Documents </span> / {{id}}
-  </mat-toolbar-row>
-</mat-toolbar>
+<div fxLayout="column" fxLayoutGap="15px">
+  <mat-toolbar class="mat-elevation-z4">
+    <mat-toolbar-row>
+      <span class="link" routerLink="../">Documents </span> / {{id}}
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div class="body mat-elevation-z2">
+    <mat-list dense>
+      <mat-list-item>
+        ID:
+      </mat-list-item>
+      <mat-list-item>
+        Title:
+      </mat-list-item>
+      <mat-list-item>
+        Author:
+      </mat-list-item>
+      <mat-list-item>
+        Date generated:
+      </mat-list-item>
+    </mat-list>
+
+    <div fxLayout="row">
+      <span fxFlex="1 1 auto"></span>
+      <mat-slide-toggle></mat-slide-toggle>Available
+    </div>
+
+  </div>
+
+  <div class="body mat-elevation-z2">
+    Viewer
+
+  </div>
+
+  <div class="body mat-elevation-z2">
+    Hard copy custody
+  </div>
+</div>

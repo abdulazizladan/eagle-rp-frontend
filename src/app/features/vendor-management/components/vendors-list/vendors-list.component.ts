@@ -4,6 +4,9 @@ import { getState } from '@ngrx/signals';
 import { MatDialog } from '@angular/material/dialog';
 import { AddVendorComponent } from '../add-vendor/add-vendor.component';
 
+/** Stripe service */
+import { StripeService } from 'ngx-stripe';
+
 @Component({
   selector: 'app-vendors-list',
   templateUrl: './vendors-list.component.html',
@@ -15,11 +18,20 @@ export class VendorsListComponent {
   store = inject(VendorStore);
   dialog = inject(MatDialog);
 
+
   constructor() {
     effect(() => {
       const state = getState(this.store);
       console.log('vendors state has changed', state)
     })
+  }
+
+  ngOnInit() {
+    //this.stripeService.elements().create('card').then((element) => {
+    //  this.card = element;
+    //  // Mount the element to a container in your template
+    //  element.mount('#card-element');
+    //});
   }
 
   openDialog(): void {

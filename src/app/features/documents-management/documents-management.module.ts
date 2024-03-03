@@ -14,6 +14,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatListModule } from '@angular/material/list';
 
 import { DocumentsManagementRoutingModule } from './documents-management-routing.module';
 import { DocumentsListComponent } from './components/documents-list/documents-list.component';
@@ -21,6 +22,7 @@ import { DocumentStore } from './store/documents.store';
 import { DocumentsDetailComponent } from './components/documents-detail/documents-detail.component';
 import { AddDocumentComponent } from './components/add-document/add-document.component';
 import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-dele
     MatSnackBarModule,
     MatDialogModule,
     MatProgressBarModule,
+    MatListModule,
+    MatSlideToggleModule,
     DocumentsManagementRoutingModule
   ],
   providers: [

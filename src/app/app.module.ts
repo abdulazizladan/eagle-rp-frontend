@@ -3,6 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { NgxStripeModule } from 'ngx-stripe';
 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -16,11 +17,12 @@ import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     AuthModule,
     BrowserModule,
+    NgxStripeModule.forRoot('***your-stripe-publishable-key***'),
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,

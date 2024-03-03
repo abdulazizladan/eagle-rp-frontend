@@ -14,6 +14,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { StaffManagementRoutingModule } from './staff-management-routing.module';
 import { StaffListComponent } from './components/staff-list/staff-list.component';
@@ -44,6 +48,10 @@ import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-dele
     MatDialogModule,
     MatSnackBarModule,
     MatProgressBarModule,
+    MatStepperModule,
+    MatDividerModule,
+    MatListModule,
+    MatDatepickerModule,
     StaffManagementRoutingModule
   ],
   providers: [

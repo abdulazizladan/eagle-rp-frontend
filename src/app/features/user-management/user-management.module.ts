@@ -27,6 +27,7 @@ import { AddUserComponent } from './components/add-user/add-user.component';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
 import { UsersStore } from './store/user.store';
 import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-dele
     UserDetailsComponent,
     AddUserComponent,
     SnackbarComponent,
-    ConfirmDeleteComponent
+    ConfirmDeleteComponent,
+    ResetPasswordComponent
   ],
   imports: [
     CommonModule,

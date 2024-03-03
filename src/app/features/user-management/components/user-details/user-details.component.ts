@@ -3,6 +3,8 @@ import { UsersStore } from '../../store/user.store';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { User } from '../../models/user.model';
+import { MatDialog } from '@angular/material/dialog';
+import { ResetPasswordComponent } from '../reset-password/reset-password.component';
 
 @Component({
   selector: 'app-user-details',
@@ -12,9 +14,12 @@ import { User } from '../../models/user.model';
 export class UserDetailsComponent implements OnInit, OnDestroy {
 
   id: string | null = "";
+  user: User | undefined = undefined;
   displayedColumns: Array<string> = ['activity', 'date', 'time'];
+  dialog = inject(MatDialog);
 
-  route = inject(ActivatedRoute)
+  router = inject(Router);
+  route = inject(ActivatedRoute);
   store = inject(UsersStore);
   email!: string;
 
@@ -25,11 +30,22 @@ export class UserDetailsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.id = this.route.snapshot.paramMap.get('id')
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.user = this.store.users().find(user => user.id == this.id);
+    if(this.user == undefined){
+    }
   }
 
   ngOnDestroy() {
 
+  }
+
+  openResetDialog() {
+    this.dialog.open(ResetPasswordComponent, {})
+  }
+
+  toggleDisable() {
+    console.log(this.id)
   }
 
 }
