@@ -16,7 +16,7 @@ export class MachineryListComponent {
       AddMachineryComponent,
       {
         ariaModal: true,
-        maxWidth: 800
+        width: "800px"
       }
     );
   }

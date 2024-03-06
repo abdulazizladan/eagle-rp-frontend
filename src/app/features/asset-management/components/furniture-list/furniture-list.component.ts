@@ -16,7 +16,7 @@ export class FurnitureListComponent {
       AddFurnitureComponent,
       {
         ariaModal: true,
-        maxWidth: 800
+        width: "800px"
       }
     );
   }

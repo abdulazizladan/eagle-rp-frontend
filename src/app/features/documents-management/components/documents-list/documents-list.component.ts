@@ -30,7 +30,7 @@ export class DocumentsListComponent {
       AddDocumentComponent,
       {
         ariaModal: true,
-        maxWidth: 800
+        width: "800px"
       }
     )
   }

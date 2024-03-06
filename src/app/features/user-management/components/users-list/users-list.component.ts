@@ -67,7 +67,7 @@ export class UsersListComponent implements OnInit, OnDestroy {
   }
 
   filter(value: string) {
-    this.word = value;
+    //this.store.di
   }
 
   openDeleteDialog(id: string) {

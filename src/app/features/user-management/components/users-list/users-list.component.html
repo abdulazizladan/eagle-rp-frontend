@@ -19,6 +19,7 @@
         search
       </mat-icon>
     </mat-form-field>
+    {{store.keyword()}}
 
     @defer(on timer(500)) {
       <table mat-table [dataSource]="store.users()">
@@ -66,16 +67,17 @@
           <td mat-cell *matCellDef="let user">
             &nbsp;
 
-            <button mat-flat-button color="accent" routerLink={{user.id}}>
-              View
+            <button mat-icon-button color="accent" routerLink={{user.id}}>
+              <mat-icon>
+                edit
+              </mat-icon>
             </button>
             &nbsp;
             <!--<button mat-flat-button color="warn" (click)="store.delete(user.id)"></button>-->
-            <button mat-flat-button color="warn" (click)="openDeleteDialog(user.id)">
-              <!--<mat-icon>
+            <button mat-icon-button color="warn" (click)="openDeleteDialog(user.id)">
+              <mat-icon>
                 delete
-              </mat-icon>-->
-              Delete
+              </mat-icon>
             </button>
             &nbsp;
             <!--<mat-slide-toggle checked={{user.isActive}} (change)="store.update(user.id, user)" >-->

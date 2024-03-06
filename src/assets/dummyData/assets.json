@@ -13,7 +13,14 @@
       "buildings": []
     }
   ],
-  "buildings": [],
+  "buildings": [
+    {
+      "id": "121212",
+      "name": "giant building",
+      "code": "gnt-bldng",
+      "cost": 12800000
+    }
+  ],
   "machines": [],
   "tools": [],
   "vehicles": [],

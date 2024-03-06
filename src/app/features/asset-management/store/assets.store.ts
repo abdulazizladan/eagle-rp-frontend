@@ -54,13 +54,21 @@ export const assetsStore = signalStore(
     },
     loadAllBuildings() {
       patchState(state, {
-        isLoading: true
+        isLoading: true,
+        buildings: []
+      });
+      assetsService.getAllBuildings().subscribe((buildings) => {
+        patchState(state, {
+          buildings,
+          isLoading: false
+        })
       })
     },
     loadAllMachines() {
       patchState(state, {
+        machinery: [],
         isLoading: true
-      })
+      });
     },
     loadAllTools() {
       patchState(state, {

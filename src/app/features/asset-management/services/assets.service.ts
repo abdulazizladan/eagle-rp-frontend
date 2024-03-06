@@ -17,7 +17,7 @@ export class AssetsService {
   private http = inject(HttpClient);
   constructor() { }
 
-  getAllSites(): Observable<Site[]> {
+  getAllSites(): Observable<Array<Site>> {
     return this.http.get<Assets>(`../assets/dummyData/assets.json`).pipe(
       map((response) => response.sites)
     )
@@ -30,26 +30,26 @@ export class AssetsService {
   }
 
   getAllTools():Observable<Array<Tool>> {
-    return this.http.get<Array<Tool>>(``).pipe(
-
-    )
+      return this.http.get<Assets>(`../assets/dummyData/assets.json`).pipe(
+        map((response) => response.tools)
+      )
   }
 
   getAllMachines(): Observable<Array<Machine>> {
-    return this.http.get<Array<Machine>>(``).pipe(
-
+    return this.http.get<Assets>(`../assets/dummyData/assets.json`).pipe(
+      map((response) => response.machinery)
     )
   }
 
   getAllVehicles(): Observable<Array<Vehicle>> {
-    return this.http.get<Array<Vehicle>>(``).pipe(
-
+    return this.http.get<Assets>(`../assets/dummyData/assets.json`).pipe(
+      map((response) => response.vehicles)
     )
   }
 
   getAllFurniture(): Observable<Array<Furniture>> {
-    return this.http.get<Array<Furniture>>(``).pipe(
-
+    return this.http.get<Assets>(`../assets/dummyData/assets.json`).pipe(
+      map((response) => response.furniture)
     )
   }
 }

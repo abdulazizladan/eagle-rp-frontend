@@ -16,7 +16,7 @@ export class BuildingsListComponent {
       AddBuildingComponent,
       {
         ariaModal: true,
-        maxWidth: 800
+        width: "800px"
       }
     );
   }

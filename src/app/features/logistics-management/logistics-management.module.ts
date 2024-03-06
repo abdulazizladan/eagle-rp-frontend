@@ -14,6 +14,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatListModule } from '@angular/material/list';
 
 import { LogisticsManagementRoutingModule } from './logistics-management-routing.module';
 import { LogisticsDashboardComponent } from './components/logistics-dashboard/logistics-dashboard.component';
@@ -40,6 +41,7 @@ import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-dele
     MatSnackBarModule,
     MatDialogModule,
     MatProgressBarModule,
+    MatListModule,
     LogisticsManagementRoutingModule
   ],
   providers: [

@@ -86,19 +86,24 @@
         Projects & planning
       </button>
       <mat-divider></mat-divider>
-      <button mat-flat-button routerLink="sales" routerLinkActive="active" color="primary">
+      <button mat-flat-button routerLink="sales" disabled routerLinkActive="active" color="primary">
         <mat-icon>payment</mat-icon>
         Sales
       </button>
       <mat-divider></mat-divider>
-      <button mat-flat-button routerLink="logistics" routerLinkActive="active" color="primary">
+      <button mat-flat-button routerLink="logistics" disabled routerLinkActive="active" color="primary">
         <mat-icon>traffic</mat-icon>
         Logistics
       </button>
       <mat-divider></mat-divider>
-      <button mat-flat-button routerLink="vendors" routerLinkActive="active" color="primary">
+      <button mat-flat-button routerLink="vendors" disabled routerLinkActive="active" color="primary">
         <mat-icon>business</mat-icon>
         Vendors
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-flat-button routerLink="vendors" disabled color="primary">
+        <mat-icon>report</mat-icon>
+        Reports
       </button>
       <mat-divider></mat-divider>
     </mat-sidenav>

@@ -5,11 +5,13 @@ import { UsersService } from "../services/users.service";
 
 type UsersState = {
   users: User[],
+  keyword: string,
   filter: { query: string; order: 'asc' | 'desc', id: string},
   isLoading: boolean
 }
 const initialState: UsersState= {
   users: [],
+  keyword: '',
   filter: {query: '', order: 'asc', id: ''},
   isLoading: false
 }

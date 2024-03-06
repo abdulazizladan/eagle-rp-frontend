@@ -39,7 +39,7 @@ export class VendorsListComponent {
       AddVendorComponent,
       {
         ariaModal: true,
-        maxWidth: 800
+        width: "800px"
       }
     )
   }

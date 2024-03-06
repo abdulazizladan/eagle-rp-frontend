@@ -66,13 +66,17 @@
           <!--Actions-->
         </th>
         <td mat-cell *matCellDef="let staff">
-          <button mat-flat-button color="accent" routerLink={{staff.basicInfo.id}}>
-            View
+          <button mat-icon-button color="accent" routerLink={{staff.basicInfo.id}}>
+            <mat-icon>
+              edit
+            </mat-icon>
           </button>
 
           &nbsp;
-          <button mat-flat-button color="warn" (click)="openConfirmDeleteDialog()">
-            Delete
+          <button mat-icon-button color="warn" (click)="openConfirmDeleteDialog()">
+            <mat-icon>
+              delete
+            </mat-icon>
           </button>
 
         </td>

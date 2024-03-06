@@ -30,7 +30,7 @@ export class ProjectDashboardComponent {
       AddProjectComponent,
       {
         ariaModal: true,
-        maxWidth: 800
+        width: "800px"
       }
     );
   }
@@ -40,7 +40,7 @@ export class ProjectDashboardComponent {
       AddTaskComponent,
       {
         ariaModal: true,
-        maxWidth: 800
+        width: "800px"
       }
     );
   }
