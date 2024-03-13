@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-task',
@@ -13,8 +13,24 @@ export class AddTaskComponent {
   taskForm = this.fb.group({
     title: ['', [Validators.required]],
     description: ['', [Validators.required]],
-
+    team: this.fb.array([]),
+    edd: ['']
   })
+
+  get team() {
+    return this.taskForm.get('team') as FormArray
+  }
+
+  addTeamMember(email: string) {
+    const newTeamMember: FormGroup = this.fb.group({
+      email: ['', Validators.required]
+    });
+    this.team.push(newTeamMember);
+  }
+
+  removeTeamMember(index: number) {
+    this.team.removeAt(index);
+  }
 
   submit(): void {
 

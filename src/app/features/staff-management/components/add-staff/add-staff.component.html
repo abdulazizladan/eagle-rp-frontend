@@ -78,7 +78,7 @@
 
           <mat-form-field appearance="outline" fxFlex="50%">
             <mat-label>Date of birth</mat-label>
-            <input matInput [matDatepicker]="picker" formControlName>
+            <input matInput [matDatepicker]="picker" formControlName="dateOfBirth">
             <mat-hint>MM/DD/YY</mat-hint>
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
@@ -161,14 +161,24 @@
           @for(employmentRecord of employmentHistory.controls; track employmentRecord; let index = $index) {
             <div fxLayout="row wrap" [formGroupName]="index" fxLayoutGap="15px">
 
-              <mat-form-field appearance="outline" fxFlex="40%%">
-                <mat-label>Title</mat-label>
-                <input matInput formControlName="title">
+              <mat-form-field appearance="outline" fxFlex="100%">
+                <mat-label>Organization</mat-label>
+                <input matInput formControlName="organization">
               </mat-form-field>
 
-              <mat-form-field appearance="outline" fxFlex="60%">
-                <mat-label>Employer</mat-label>
-                <input matInput formControlName="employer">
+              <mat-form-field appearance="outline" fxFlex="40%">
+                <mat-label>Role</mat-label>
+                <input matInput formControlName="role">
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" fxFlex="1 1 auto">
+                <mat-label>Department</mat-label>
+                <input matInput formControlName="department">
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" fxFlex="100%">
+                <mat-label>Job description</mat-label>
+                <input matInput formControlName="jobDescription">
               </mat-form-field>
 
               <mat-form-field appearance="outline" fxFlex="220px">

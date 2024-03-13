@@ -67,8 +67,10 @@ export class AddStaffComponent {
 
   addEmployment() {
     const employment: FormGroup = this.fb.group({
-      title: [''],
-      employer: [''],
+      organization: [''],
+      role: [''],
+      jobDescription: [''],
+      department: [''],
       from: [0],
       to: [0]
     });

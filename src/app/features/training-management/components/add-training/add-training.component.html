@@ -1,1 +1,31 @@
-<p>add-training works!</p>
+<mat-toolbar color="accent">
+  <h1>Add Training</h1>
+</mat-toolbar>
+<mat-dialog-content fxLayout="row wrap" fxLayoutGap="15px" [formGroup]="trainingForm">
+  <div fxFlex="100%"></div>
+
+  <mat-form-field appearance="outline" fxFlex="100%">
+    <mat-label>training title</mat-label>
+    <input matInput formControlName="title">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" fxFlex="100%">
+    <mat-label>training title</mat-label>
+    <textarea rows="3" matInput formControlName="description"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" fxFlex="240px">
+    <mat-label>Facilitators</mat-label>
+    <mat-select formControlName="facilitator">
+      <mat-option value="Gold Star">Gold Star</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-flat-button color="warn" matDialogClose>Close dialog</button>
+    <span fxFlex="1 1 auto"></span>
+    <button mat-flat-button color="accent">Action</button>
+
+</mat-dialog-actions>

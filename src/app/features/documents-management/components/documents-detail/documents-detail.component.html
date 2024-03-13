@@ -4,8 +4,8 @@
       <span class="link" routerLink="../">Documents </span> / {{id}}
     </mat-toolbar-row>
   </mat-toolbar>
-
-  <div class="body mat-elevation-z2">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>Document details</mat-expansion-panel-header>
     <mat-list dense>
       <mat-list-item>
         ID:
@@ -20,13 +20,17 @@
         Date generated:
       </mat-list-item>
     </mat-list>
+  </mat-expansion-panel>
+
+  <!--<div class="body mat-elevation-z2">
+
 
     <div fxLayout="row">
       <span fxFlex="1 1 auto"></span>
       <mat-slide-toggle></mat-slide-toggle>Available
     </div>
 
-  </div>
+  </div>-->
 
   <div class="body mat-elevation-z2">
     Viewer

@@ -15,6 +15,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { DocumentsManagementRoutingModule } from './documents-management-routing.module';
 import { DocumentsListComponent } from './components/documents-list/documents-list.component';
@@ -48,6 +49,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatProgressBarModule,
     MatListModule,
     MatSlideToggleModule,
+    MatExpansionModule,
     DocumentsManagementRoutingModule
   ],
   providers: [

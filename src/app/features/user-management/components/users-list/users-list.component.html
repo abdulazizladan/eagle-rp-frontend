@@ -22,6 +22,9 @@
     {{store.keyword()}}
 
     @defer(on timer(500)) {
+      @if(store.usersCount() === 0){
+        <h2>No users</h2>
+      }@else{
       <table mat-table [dataSource]="store.users()">
 
         <ng-container matColumnDef="id">
@@ -94,7 +97,7 @@
 
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
-      </table>}@placeholder {
+      </table>}}@placeholder {
         <mat-progress-bar color="accent" mode="query"></mat-progress-bar>
       }
   </div>

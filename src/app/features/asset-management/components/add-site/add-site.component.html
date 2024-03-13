@@ -6,7 +6,8 @@
 </mat-dialog-content>
 
 <mat-dialog-actions align="start">
-    <button mat-button matDialogClose>Close dialog</button>
-    <button mat-button (click)="store.addSite()">Action</button>
+  <button mat-flat-button color="warn" matDialogClose>Close dialog</button>
+  <span fxFlex="1 1 auto"></span>
+  <button mat-flat-button color="accent">Action</button>
 
 </mat-dialog-actions>

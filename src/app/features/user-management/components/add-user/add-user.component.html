@@ -7,6 +7,7 @@
   <mat-form-field appearance="outline" fxFlex="30%">
     <mat-label>ID</mat-label>
     <input matInput formControlName="id">
+    <mat-hint></mat-hint>
   </mat-form-field>
 
   <mat-form-field appearance="outline" fxFlex="70%">
@@ -40,7 +41,7 @@
 <mat-form-field appearance="outline" fxFlex="50%">
   <mat-label>Confirm password</mat-label>
   <input type="password" matInput formControlName="passwordConfirm">
-  <mat-hint align="end"></mat-hint>
+  <mat-hint align="end">Passwords must match</mat-hint>
 </mat-form-field>
 
 </mat-dialog-content>

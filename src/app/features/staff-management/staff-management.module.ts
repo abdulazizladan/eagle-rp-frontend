@@ -25,6 +25,7 @@ import { AddStaffComponent } from './components/add-staff/add-staff.component';
 import { StaffDetailsComponent } from './components/staff-details/staff-details.component';
 import { StaffStore } from './store/staff.store';
 import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-dele
     MatDividerModule,
     MatListModule,
     MatDatepickerModule,
+    MatExpansionModule,
     StaffManagementRoutingModule
   ],
   providers: [

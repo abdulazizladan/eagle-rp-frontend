@@ -11,8 +11,31 @@ export class AddProjectComponent {
   private fb = inject(FormBuilder);
 
   projectForm = this.fb.group({
+    title: ['', [Validators.required]],
+    description: ['', [Validators.required]],
+    contractor: ['', [Validators.required]],
+    milestones: this.fb.array([
+      this.fb.group({
 
+      })
+    ])
   })
+
+  get milestones(): FormArray {
+    return this.projectForm.get('milestones') as FormArray
+  }
+
+  addMilestone(): void {
+    const newMilestone = this.fb.group({
+      'title': [''],
+      'description': [''],
+      'edd': ['']
+    })
+  }
+
+  removeMilestone(index: number): void {
+    this.milestones.removeAt(index);
+  }
 
   submit(): void {
 

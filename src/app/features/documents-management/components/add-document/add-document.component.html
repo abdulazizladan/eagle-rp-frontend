@@ -3,24 +3,25 @@
 </mat-toolbar>
 
 <mat-dialog-content>
-    <div fxLayout="column" fxLayoutGap="15px" [formGroup]="newDocumentForm">
+    <div fxLayout="row wrap" fxLayoutGap="15px" [formGroup]="newDocumentForm">
 
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" fxFlex="240px">
         <mat-label>ID</mat-label>
         <input matInput formControlName="id">
       </mat-form-field>
 
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" fxFlex="1 1 auto">
         <mat-label>Title</mat-label>
         <input matInput formControlName="title">
       </mat-form-field>
 
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" fxFlex="100%">
         <mat-label>Description</mat-label>
-        <input matInput formControlName="description">
+        <textarea matInput formControlName="description">
+        </textarea>
       </mat-form-field>
 
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" fxFlex="240px">
         <mat-label>Type</mat-label>
         <mat-select formControlName="type">
           <mat-option value="letter">Letter</mat-option>
@@ -29,11 +30,14 @@
         </mat-select>
       </mat-form-field>
 
+      <input mat-flat-button color="accent" type="file">
+
     </div>
 </mat-dialog-content>
 
 <mat-dialog-actions align="end">
     <button mat-flat-button color="warn" matDialogClose>Close dialog</button>
+    <span fxFlex="1 1 auto"></span>
     <button mat-flat-button color="accent" (click)="submit()" [disabled]="newDocumentForm.invalid">Action</button>
 
 </mat-dialog-actions>

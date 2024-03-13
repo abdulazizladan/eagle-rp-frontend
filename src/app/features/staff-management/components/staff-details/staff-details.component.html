@@ -9,6 +9,7 @@
   </mat-toolbar>
 
   <!--Body-->
+
   <div class="body mat-elevation-z2" fxLayout="column" fxLayoutGap="15px">
     <h3>
       <mat-icon>person</mat-icon>
@@ -25,28 +26,28 @@
     </mat-list>
   </div>
 
-  <div class="body mat-elevation-z2">
-    <h3>Contact information</h3>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>Contact information</mat-expansion-panel-header>
     <mat-divider></mat-divider>
     <mat-list>
       <mat-list-item>Phone number: +234 {{staff?.contactInfo?.phoneNumber}}</mat-list-item>
       <mat-list-item>Email: {{staff?.contactInfo?.email}}</mat-list-item>
-      <mat-list-item>Residential Address: {{staff?.contactInfo?.email}}</mat-list-item>
+      <mat-list-item>Residential Address: {{staff?.contactInfo?.homeAddress}}</mat-list-item>
     </mat-list>
-  </div>
+  </mat-expansion-panel>
 
-  <div class="body mat-elevation-z2">
-    <h3>Biodata</h3>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>Biodata</mat-expansion-panel-header>
     <mat-divider></mat-divider>
     <mat-list>
-      <mat-list-item>Date of birth: {{staff?.biodata?.dateOfBirth}}</mat-list-item>
+      <mat-list-item>Date of birth: {{staff?.biodata?.dateOfBirth | date}}</mat-list-item>
       <mat-list-item>Gender: {{staff?.biodata?.gender | titlecase}}</mat-list-item>
       <mat-list-item>Blood group: {{staff?.biodata?.bloodGroup}}</mat-list-item>
     </mat-list>
-  </div>
+  </mat-expansion-panel>
 
-  <div class="body mat-elevation-z2">
-    <h3>Skills</h3>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>Skills</mat-expansion-panel-header>
     <mat-divider></mat-divider>
     <mat-list>
       <mat-list-item>
@@ -60,20 +61,23 @@
         Score (/10)
       </mat-list-item>
     </mat-list>
-  </div>
+  </mat-expansion-panel>
 
-  <div class="body mat-elevation-z2">
-    <h3>Work experience</h3>
-    <mat-divider></mat-divider>
-  </div>
-
-  <div class="body mat-elevation-z2">
-    <h3>Education</h3>
-    @if(staff) {
-      {{staff.educationHistory}}
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>Work experience</mat-expansion-panel-header>
+    @if(staff?.employmentHistory) {
+      @for(record of staff?.employmentHistory; track record) {
+        {{record.from}}
+        <mat-divider></mat-divider>
+      }
     }
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>Education</mat-expansion-panel-header>
+      {{staff?.educationHistory}}
     <mat-divider></mat-divider>
-  </div>
+  </mat-expansion-panel>
 
   <div class="body mat-elevation-z2">
     <h3>Payment history</h3>

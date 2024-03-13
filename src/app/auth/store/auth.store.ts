@@ -3,7 +3,7 @@ import { signalStore, withState, patchState, withComputed, withMethods, withHook
 import { AuthService } from '../services/auth.service';
 
 export type AuthState = {
-  token: string;
+  token: string | undefined;
   isAuthenticated: boolean;
   isLoading: boolean
 }
@@ -25,6 +25,12 @@ export const AuthStore = signalStore(
       })
     },
     authenticate() {
+      patchState(state, {
+
+      })
+    },
+    logout() {
+      isLoading: true;
       patchState(state, {
 
       })
