@@ -32,6 +32,23 @@
 
       <input mat-flat-button color="accent" type="file">
 
+      <mat-form-field class="example-form-field" appearance="outline" fxFlex="100%">
+        <mat-label>Document keywords</mat-label>
+        <mat-chip-grid #chipGrid aria-label="Enter keywords" >
+          @for (keyword of keywords; track keyword) {
+            <mat-chip-row (removed)="removeKeyword(keyword)">
+              {{keyword}}
+              <button matChipRemove aria-label="'remove ' + keyword">
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip-row>
+          }
+        </mat-chip-grid>
+        <input placeholder="New keyword..."
+                [matChipInputFor]="chipGrid"
+                (matChipInputTokenEnd)="add($event)"/>
+      </mat-form-field>
+
     </div>
 </mat-dialog-content>
 

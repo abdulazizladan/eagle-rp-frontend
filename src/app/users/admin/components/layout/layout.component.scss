@@ -21,9 +21,17 @@
       border: 1px solid grey;
     }
   }
+  mat-expansion-panel{
+    background-color: #444444;
+    color: #ffffff;
+    text-align: center;
+    padding: 0px
+  }
   button{
     width: 100%;
     color: white;
+    padding: 15px;
+    font-weight: lighter;
   }
   .active{
     width: 100%;
@@ -31,3 +39,4 @@
     color: white;
   }
 }
+
