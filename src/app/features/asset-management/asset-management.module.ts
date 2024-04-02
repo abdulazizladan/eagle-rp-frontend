@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -38,6 +39,7 @@ import { VehicleDetailsComponent } from './components/vehicle-details/vehicle-de
 import { ToolDetailsComponent } from './components/tool-details/tool-details.component';
 import { FurnitureDetailsComponent } from './components/furniture-details/furniture-details.component';
 import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
+import { RepairHistoryComponent } from './components/repair-history/repair-history.component';
 
 
 @NgModule({
@@ -61,11 +63,13 @@ import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-dele
     VehicleDetailsComponent,
     ToolDetailsComponent,
     FurnitureDetailsComponent,
-    ConfirmDeleteComponent
+    ConfirmDeleteComponent,
+    RepairHistoryComponent
   ],
   imports: [
     CommonModule,
     HttpClientModule,
+    FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
     MatToolbarModule,

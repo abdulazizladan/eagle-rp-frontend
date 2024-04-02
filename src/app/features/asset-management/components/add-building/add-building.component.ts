@@ -10,7 +10,13 @@ export class AddBuildingComponent {
 
   private fb = inject(FormBuilder);
 
-  newBuildingForm = this.fb.group({});
+  newBuildingForm = this.fb.group({
+    name: ['', [Validators.required]],
+    code: ['', []],
+    dateCommissioned: [null],
+    location: [''],
+    initialValuation: [0, [Validators.required]]
+  });
 
   submit(): void {
 

@@ -3,7 +3,23 @@
 </mat-toolbar>
 
 <mat-dialog-content>
-    Dialog content
+  <div fxLayout="row wrap" fxLayoutGap="15px grid">
+
+    <mat-form-field fxFlex="1 1 auto" appearance="outline">
+      <mat-label>Building name</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field fxFlex="240px" appearance="outline">
+      <mat-label>Building code</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field fxFlex="100%" appearance="outline">
+      <mat-label>Building description</mat-label>
+      <textarea matInput rows="4"></textarea>
+    </mat-form-field>
+  </div>
 </mat-dialog-content>
 
 <mat-dialog-actions align="start">

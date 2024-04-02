@@ -50,7 +50,10 @@ import { AdminStore } from './store/admin.store';
     AdminRoutingModule
   ],
   providers: [
-    { provide: NgChartsConfiguration, useValue: { generateColors: false }},
+    {
+      provide: NgChartsConfiguration,
+      useValue: { generateColors: false }
+    },
     AdminStore
   ]
 })

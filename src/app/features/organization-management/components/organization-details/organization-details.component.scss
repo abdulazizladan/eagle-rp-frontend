@@ -1,0 +1,22 @@
+.link{
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+}
+.body{
+  padding: 15px;
+  div{
+    #logo{
+      width: 200px;
+      border: 1px solid grey;
+      aspect-ratio: 1/1;
+    }
+  }
+}
+tr{
+  transition: 0.8s;
+  cursor: pointer;
+}
+tr:hover{
+  background-color: #cccccc;
+}

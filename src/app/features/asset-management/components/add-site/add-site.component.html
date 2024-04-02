@@ -2,12 +2,95 @@
   <mat-icon>add</mat-icon><h1>New site</h1>
 </mat-toolbar>
 <mat-dialog-content>
-    Dialog content
+
+    <div fxLayout="row wrap" fxLayoutGap="15px grid">
+
+      <mat-form-field fxFlex="1 1 auto" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="180px" appearance="outline">
+        <mat-label>Code</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <div fxFlex="100%" fxLayout="row wrap" fxLayoutGap="15px grid">
+
+        <mat-form-field fxFlex="100%" appearance="outline">
+          <mat-label>Street address</mat-label>
+          <input matInput>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="240px" appearance="outline">
+          <mat-label>Country</mat-label>
+          <mat-select>
+            <mat-option value="Nigeria">Nigeria</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="240px" appearance="outline">
+          <mat-label>State</mat-label>
+          <mat-select [(ngModel)]="selectedState">
+            <mat-option value="Abia">Abia</mat-option>
+            <mat-option value="Adamawa">Adamawa</mat-option>
+            <mat-option value="Akwa Ibom">Akwa Ibom</mat-option>
+            <mat-option value="Anambra">Anambra</mat-option>
+            <mat-option value="Bauchi">Bauchi</mat-option>
+            <mat-option value="Bayelsa">Bayelsa</mat-option>
+            <mat-option value="Benue">Benue</mat-option>
+            <mat-option value="Borno">Borno</mat-option>
+            <mat-option value="Cross River">Cross River</mat-option>
+            <mat-option value="Delta">Delta</mat-option>
+            <mat-option value="Ebonyi">Ebonyi</mat-option>
+            <mat-option value="Edo">Edo</mat-option>
+            <mat-option value="Ekiti">Ekiti</mat-option>
+            <mat-option value="Enugu">Enugu</mat-option>
+            <mat-option value="FCT">Federal Capital Territory</mat-option>
+            <mat-option value="Gombe">Gombe</mat-option>
+            <mat-option value="Imo">Imo</mat-option>
+            <mat-option value="Jigawa">Jigawa</mat-option>
+            <mat-option value="Kaduna">Kaduna</mat-option>
+            <mat-option value="Kano">Kano</mat-option>
+            <mat-option value="Katsina">Katsina</mat-option>
+            <mat-option value="Kebbi">Kebbi</mat-option>
+            <mat-option value="Kogi">Kogi</mat-option>
+            <mat-option value="Kwara">Kwara</mat-option>
+            <mat-option value="Lagos">Lagos</mat-option>
+            <mat-option value="Nasarawa">Nasarawa</mat-option>
+            <mat-option value="Niger">Niger</mat-option>
+            <mat-option value="Ogun">Ogun</mat-option>
+            <mat-option value="Ondo">Ondo</mat-option>
+            <mat-option value="Osun">Osun</mat-option>
+            <mat-option value="Oyo">Oyo</mat-option>
+            <mat-option value="Plateau">Plateau</mat-option>
+            <mat-option value="Rivers">Rivers</mat-option>
+            <mat-option value="Sokoto">Sokoto</mat-option>
+            <mat-option value="Taraba">Taraba</mat-option>
+            <mat-option value="Yobe">Yobe</mat-option>
+            <mat-option value="Zamfara">Zamfara</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        @if(selectedState){<mat-form-field fxFlex="240px" appearance="outline">
+          <mat-label>LGA</mat-label>
+          <mat-select>
+            @for(lga of getLGAs(selectedState)?.lgas; track lga) {
+              <mat-option value="lga">{{lga}}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        }
+
+      </div>
+
+    </div>
+
 </mat-dialog-content>
 
 <mat-dialog-actions align="start">
   <button mat-flat-button color="warn" matDialogClose>Close dialog</button>
   <span fxFlex="1 1 auto"></span>
-  <button mat-flat-button color="accent">Action</button>
+  <button mat-flat-button color="accent" (click)="submit()">Add site</button>
 
 </mat-dialog-actions>

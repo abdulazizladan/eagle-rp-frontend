@@ -66,9 +66,11 @@ export class UsersListComponent implements OnInit, OnDestroy {
     }, {injector: this.injector})
   }
 
-  filter(value: string) {
-    //this.store.di
+  filterUsers(keyword: string) {
+    this.store.keyword = signal(keyword);
   }
+
+
 
   openDeleteDialog(id: string) {
     const userId = id;

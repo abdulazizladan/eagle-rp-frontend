@@ -1,1 +1,35 @@
-<p>organization-details works!</p>
+<div fxLayout="column" fxLayoutGap="15px">
+  <mat-toolbar class="mat-elevation-z4">
+    <mat-toolbar-row>
+      <h1>
+        <span routerLink="../" class="link">Organization</span>
+      </h1>
+      <span fxFlex="1 1 auto"></span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div class="body mat-elevation-z2" fxLayout="column" fxLayoutGap="15px">
+    <div>
+      <div id="logo"></div>
+    </div>
+    <mat-list>
+      <mat-list-item>
+        Organization name
+      </mat-list-item>
+      <mat-list-item>
+        Address
+      </mat-list-item>
+      <mat-list-item>
+
+      </mat-list-item>
+    </mat-list>
+    <div fxLayout="row">
+      <span fxFlex="1 1 auto"></span>
+      <button mat-button color="accent">
+        <mat-icon>
+          edit
+        </mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
